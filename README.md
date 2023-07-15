@@ -7,7 +7,7 @@ A repository for the Web Design and Development group assignment.
 
 ### Group members
 
--
+- Low See Li
 -
 -
 -
