@@ -8,7 +8,7 @@ A repository for the Web Design and Development group assignment.
 ### Group members
 
 - Low See Li
--
+- Leong Kai Bing
 -
 -
 
@@ -16,6 +16,8 @@ A repository for the Web Design and Development group assignment.
 **Tutor Name :** Lim Kah Lok
 
 # Proposal
+
+## Website Title : ?
 
 ## Description
 
