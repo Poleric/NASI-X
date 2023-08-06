@@ -9,8 +9,9 @@ A repository for the Web Design and Development group assignment.
 
 - Low See Li
 - Leong Kai Bing
--
--
+- Chea Hong Jun
+- Ng Yu Heng
+- Ung Ren Jun
 
 **Tutorial Group :** G1 \
 **Tutor Name :** Lim Kah Lok
