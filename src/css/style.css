@@ -61,7 +61,6 @@ p {
     letter-spacing: 2px; 
     transition: all 0.3s ease;  
 }
-
 .tabs-container a:hover {    
     background-color: #4c79bd;
 }
