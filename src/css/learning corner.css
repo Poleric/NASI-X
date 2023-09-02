@@ -24,8 +24,8 @@ body {
     font-size: 21px;
     margin: 50px;
     font-weight: 550;
-    word-spacing: 10px; 
-    position: relative; 
+    word-spacing: 10px; /* Add space between words */
+    position: relative; /* Add this for absolute positioning */
 }
 
 .menu-bar a::before {
@@ -39,6 +39,10 @@ body {
     transition: .3s;
 }
 
-.menu-bar a:hover ::before {
+.menu-bar a:hover::before { /* Remove the space between :hover and ::before */
+    width: 100%;
+}
+
+.menu-bar a.current::before { /* Style for current page link */
     width: 100%;
 }
