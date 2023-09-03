@@ -1,19 +1,17 @@
 html {
     font-family: Lato, sans-serif;
-    background-image: url(../img/assignment\ picture.jpg);
+    background-image: url("../img/assignment picture.jpg");
     background-attachment: fixed;
-}
-
-body {
-
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .header {
-    position: fixed;
-    width: 83%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    justify-content: center;
     align-items: center;
+    margin: 2vh 2vw;
 }
 
 .header .logo {
@@ -21,8 +19,16 @@ body {
     text-decoration: none;
     font-size: 35px;
     font-weight: bold;
-    margin-top: 10px;
-    margin-left: 30px;
+    margin-right: auto;
+}
+
+.menu-bar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2em;
+    gap: 3em;
 }
 
 .menu-bar .logo  {
@@ -32,19 +38,13 @@ body {
     font-weight: bold;
 }
 
-.menu-bar {
-    margin-top: 8px;
-    margin-right: 65px;
-}
-
 .menu-bar a {
     text-decoration: none;
     color: #e8e8e8;
     font-size: 21px;
-    margin: 50px;
     font-weight: 550;
-    word-spacing: 10px; 
-    position: relative; 
+    word-spacing: 10px;
+    position: relative;
 }
 
 .menu-bar a::before {
@@ -60,4 +60,34 @@ body {
 
 .menu-bar a:hover::before {
     width: 100%;
+}
+
+.dropdown-icon {
+    margin-left: auto;
+    width: 25px;
+}
+
+@media (max-width: 850px) {
+    .menu-bar {
+        display: none;
+    }
+
+    .header {
+        grid-template-columns: 1fr;
+        place-content: center;
+        place-items: center;
+    }
+
+    .header .logo {
+        margin-right: 0;
+    }
+
+    .dropdown-icon {
+        position: absolute;
+        left: 90%;
+        transform: translateY(1px);
+        margin-left: 0;
+    }
+
+
 }
