@@ -5,15 +5,36 @@ html {
 }
 
 body {
+
+}
+
+.header {
+    position: fixed;
+    width: 83%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 21px;
+}
+
+.header .logo {
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.menu-bar .logo  {
+    color: #e8e8e8;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .menu-bar {
-    flex-direction: column;
-    text-align: center;
+    margin-top: 8px;
+    margin-right: 65px;
 }
 
 .menu-bar a {
