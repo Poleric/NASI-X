@@ -1,6 +1,6 @@
 html {
     font-family: Lato, sans-serif;
-    background-image: url(index\ background.jpg);
+    background-image: url(../img/assignment\ picture.jpg);
     background-attachment: fixed;
 }
 
@@ -9,8 +9,6 @@ body {
     justify-content: center;
     align-items: center;
     margin: 21px;
-    background-image: url(index\ background.jpg);
-    background-attachment: fixed;
 }
 
 .menu-bar {
@@ -24,8 +22,8 @@ body {
     font-size: 21px;
     margin: 50px;
     font-weight: 550;
-    word-spacing: 10px; /* Add space between words */
-    position: relative; /* Add this for absolute positioning */
+    word-spacing: 10px; 
+    position: relative; 
 }
 
 .menu-bar a::before {
@@ -39,10 +37,6 @@ body {
     transition: .3s;
 }
 
-.menu-bar a:hover::before { /* Remove the space between :hover and ::before */
-    width: 100%;
-}
-
-.menu-bar a.current::before { /* Style for current page link */
+.menu-bar a:hover::before {
     width: 100%;
 }
