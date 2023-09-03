@@ -34,7 +34,13 @@ body {
 
 .menu-bar {
     margin-top: 8px;
-    margin-right: 65px;
+    margin-left: 40px;
+}
+
+.drop-down-icon {
+    margin-top: 8px;
+    display: blox;
+    margin-left: auto;
 }
 
 .menu-bar a {
