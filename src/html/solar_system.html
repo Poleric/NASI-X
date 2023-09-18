@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Solar System</title>
+
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/solar_system.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <span class="title">Solar System Model</span>
+    </header>
+<!--
+TODO: Make planet info popup
+TODO: Make planet color more accurate
+-->
+    <div id="solar-system-container">
+        <div id="solar-system">
+            <div class="orbit" id="sun">
+                <div class="planet"></div>
+            </div>
+
+
+            <div class="orbit" id="mercury">
+                <div class="planet"></div>
+            </div>
+
+            <div class="orbit" id="venus">
+                <div class="planet"></div>
+            </div>
+
+            <div class="orbit" id="earth">
+                <div class="planet have-moon">
+                    <div class="orbit moon-orbit" id="moon">
+                        <div class="planet"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="orbit" id="mars">
+                <div class="planet"></div>
+            </div>
+
+            <div class="orbit" id="jupiter">
+                <div class="planet"></div>
+            </div>
+
+            <div class="orbit" id="saturn">
+                <div class="planet have-moon">
+                    <div class="orbit moon-orbit ring" id="A-ring"></div>
+                    <div class="orbit moon-orbit ring" id="cassini-div"></div>
+                    <div class="orbit moon-orbit ring" id="B-ring"></div>
+                    <div class="orbit moon-orbit ring" id="C-ring"></div>
+                </div>
+            </div>
+
+            <div class="orbit" id="uranus">
+                <div class="planet"></div>
+            </div>
+
+            <div class="orbit" id="neptune">
+                <div class="planet"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
