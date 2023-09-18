@@ -35,29 +35,30 @@ header {
 
 #solar-system-container {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+
     width: 90vw;
     height: 90vh;
-    overflow-y: hidden;
-    overflow-x: hidden;
+
+    overflow: hidden;
 
     background-color: var(--galaxy-color);
     margin: 5%;
     border-radius: 3em;
+
 }
 
 #solar-system, .have-moon {
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    position: relative;
 }
 
 .orbit {
-    position: relative;
-    grid-row: 1;
-    grid-column: 1;
+    position: absolute;
 
     width: var(--orbit-diameter);
     height: var(--orbit-diameter);
@@ -68,8 +69,21 @@ header {
     animation-duration: var(--actual-orbit-duration);
 
     /* orbit ring */
-    border: rgba(60, 60, 60, 0.4) solid 0.3px;
-    border-radius: 50%;
+    &::before {
+        content: '';
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        border: white solid 0.1em;
+        border-radius: 50%;
+        opacity: 10%;
+    }
+
+    &:hover::before {
+        opacity: 40%;
+    }
 }
 
 .planet {
@@ -84,12 +98,16 @@ header {
     border-radius: 50%;
 }
 
-.moon-orbit {
-    position: absolute;
-}
-
 .ring {
     animation: none;
+
+    &::before {
+        opacity: 50%;
+    }
+
+    &:hover::before {
+        opacity: 50%;
+    }
 }
 
 @keyframes orbit {
@@ -99,6 +117,47 @@ header {
     to {
         transform: rotateZ(-360deg);
     }
+}
+
+/* Planet order */
+#sun {
+    z-index: 10;
+}
+
+#mercury {
+    z-index: 9;
+}
+
+#venus {
+    z-index: 8;
+}
+
+#earth {
+    z-index: 7;
+}
+
+#moon {
+    z-index: 6;
+}
+
+#mars {
+    z-index: 5;
+}
+
+#jupiter {
+    z-index: 4;
+}
+
+#saturn {
+    z-index: 3;
+}
+
+#uranus {
+    z-index: 2;
+}
+
+#neptune {
+    z-index: 1;
 }
 
 /* Planet Color */
@@ -135,20 +194,20 @@ header {
 #saturn .planet {
     background: linear-gradient(45deg, rosybrown, sandybrown, rosybrown);
 
-    & #A-ring {
-        border: calc(0.05 * var(--planet-diameter)) solid rgba(161, 138, 106, 0.7);
+    & #A-ring::before {
+        border: calc(0.05 * var(--planet-diameter)) solid rgb(161, 138, 106);
     }
 
-    & #cassini-div {
-        border: calc(0.01 * var(--planet-diameter)) solid rgba(20, 20, 20, 0.7);
+    & #cassini-div::before {
+        border: calc(0.01 * var(--planet-diameter)) solid rgb(20, 20, 20);
     }
 
-    & #B-ring {
-        border: calc(0.2 * var(--planet-diameter)) solid rgba(161, 138, 106, 0.7);
+    & #B-ring::before {
+        border: calc(0.2 * var(--planet-diameter)) solid rgb(161, 138, 106);
     }
 
-    & #C-ring {
-        border: calc(0.1 * var(--planet-diameter)) solid rgba(161, 138, 106, 0.7)
+    & #C-ring::before {
+        border: calc(0.1 * var(--planet-diameter)) solid rgb(161, 138, 106);
     }
 }
 
