@@ -57,6 +57,13 @@ header {
     position: relative;
 }
 
+#solar-system {
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
 .orbit {
     position: absolute;
 
@@ -78,7 +85,7 @@ header {
 
         border: white solid 0.1em;
         border-radius: 50%;
-        opacity: 10%;
+        opacity: 20%;
     }
 
     &:hover::before {
@@ -100,13 +107,10 @@ header {
 
 .ring {
     animation: none;
+    pointer-events: none;  /* disable on hover event */
 
     &::before {
-        opacity: 50%;
-    }
-
-    &:hover::before {
-        opacity: 50%;
+        opacity: 100%;
     }
 }
 
@@ -193,6 +197,10 @@ header {
 
 #saturn .planet {
     background: linear-gradient(45deg, rosybrown, sandybrown, rosybrown);
+
+    & .ring::before {
+        opacity: 50%;
+    }
 
     & #A-ring::before {
         border: calc(0.05 * var(--planet-diameter)) solid rgb(161, 138, 106);
