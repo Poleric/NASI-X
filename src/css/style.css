@@ -2,17 +2,17 @@
     --text-color: white;
 }
 
+* {
+    text-align: center;
+    color: var(--text-color);
+}
+
 header {
     display: grid;
     grid-template-columns: auto 1fr auto;
     justify-content: center;
     align-items: center;
     padding: 1em 2em;  /* vert_pad  horiz_pad */
-}
-
-h1, h2, h3, h4, h5, h6, span {
-    text-align: center;
-    color: var(--text-color);
 }
 
 .logo {
