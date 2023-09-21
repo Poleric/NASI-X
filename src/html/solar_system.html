@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Solar System</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/solar_system.css">
+    <script src="../js/solar_system.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">NASI-X</a>
+
+        <nav class="menu-bar">
+            <a href="home.html"><span>HOME</span></a>
+            <a href="learning corner.html"><span>LEARNING CORNER</span></a>
+            <a href="solar_system.html"><span>PLANETARY MODEL</span></a>
+            <a href="news.html"><span>NEWS</span></a>
+            <a href="forum.html"><span>FORUM</span></a>
+        </nav>
+
+        <img class="dropdown-icon" src="../img/drop_down_icon-removebg-preview.png" width="25" alt="">
+    </header>
+<!--
+TODO: Make planet info popup
+TODO: add asteroid belt
+TODO: Make planet color more accurate
+-->
+
+    <div class="sections">
+        <div class="section">
+            <h1 style="font-size: 2em">Let's take deep dive into the Universe.</h1>
+        </div>
+
+
+        <div class="section">
+
+            <h1 class="fly-in-elems">The solar system representation</h1>
+            <div id="solar-system" class="fly-in-elems" style="transition-delay: 100ms;">
+                <div class="orbit" id="sun">
+                    <div class="planet"></div>
+                </div>
+
+                <div class="orbit" id="mercury">
+                    <div class="planet"></div>
+                </div>
+
+                <div class="orbit" id="venus">
+                    <div class="planet"></div>
+                </div>
+
+                <div class="orbit" id="earth">
+                    <div class="planet have-moon">
+                        <div class="orbit moon-orbit" id="moon">
+                            <div class="planet"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="orbit" id="mars">
+                    <div class="planet"></div>
+                </div>
+
+                <div class="orbit" id="jupiter">
+                    <div class="planet"></div>
+                </div>
+
+                <div class="orbit" id="saturn">
+                    <div class="planet have-moon">
+                        <div class="orbit moon-orbit ring" id="A-ring"></div>
+                        <div class="orbit moon-orbit ring" id="cassini-div"></div>
+                        <div class="orbit moon-orbit ring" id="B-ring"></div>
+                        <div class="orbit moon-orbit ring" id="C-ring"></div>
+                    </div>
+                </div>
+
+                <div class="orbit" id="uranus">
+                    <div class="planet"></div>
+                </div>
+
+                <div class="orbit" id="neptune">
+                    <div class="planet"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

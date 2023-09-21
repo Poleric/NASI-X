@@ -1,0 +1,353 @@
+:root {
+    --text-color: #E0EFDE;  /* Honeydew */
+    --galaxy-color: #0e0e19;
+
+    --earth-diameter: 0.8em;
+    --earth-orbit-diameter: 15em;
+    --orbit-speed-scale: 10;
+}
+
+/* TODO: tidy up planet size part. Use more constants em rather than calc. */
+
+html {
+    background-image: none;
+}
+
+body {
+    background-color: var(--galaxy-color);
+}
+
+.header {
+    background: linear-gradient(180deg, black, transparent);
+}
+
+.sections {
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+
+.section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.fly-in-elems {
+    opacity: 0;
+    filter: blur(5px);
+    translate: -50%;
+    transition: all 1s;
+}
+
+.fly-in {
+    opacity: 1;
+    filter: blur(0);
+    translate: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    color: var(--text-color);
+}
+
+#solar-system {
+    margin: 5% 1%;
+}
+
+#solar-system, .have-moon {
+    display: grid;
+    place-items: center;
+}
+
+.orbit {
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+
+    width: var(--orbit-diameter);
+    height: var(--orbit-diameter);
+
+    animation-name: orbit;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: var(--actual-orbit-duration);
+
+    /* orbit ring */
+    &::before {
+        content: '';
+
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        border: white solid 0.1em;
+        border-radius: 50%;
+        opacity: 20%;
+    }
+
+    &:hover::before {
+        opacity: 40%;
+    }
+}
+
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    translate: -50% -50%;
+
+    width: var(--planet-diameter);
+    height: var(--planet-diameter);
+
+    border-radius: 50%;
+}
+
+.moon-orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+
+.ring {
+    animation: none;
+    pointer-events: none;  /* disable on hover event */
+
+    &::before {
+        opacity: 100%;
+    }
+}
+
+@keyframes orbit {
+    from {
+        rotate: z 0deg;
+    }
+    to {
+        rotate: z -360deg;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .fly-in-elems {
+        /*transition: none;*/
+    }
+}
+
+/* Planet order */
+#sun {
+    z-index: 10;
+}
+
+#mercury {
+    z-index: 9;
+}
+
+#venus {
+    z-index: 8;
+}
+
+#earth {
+    z-index: 7;
+}
+
+#moon {
+    z-index: 6;
+}
+
+#mars {
+    z-index: 5;
+}
+
+#jupiter {
+    z-index: 4;
+}
+
+#saturn {
+    z-index: 3;
+}
+
+#uranus {
+    z-index: 2;
+}
+
+#neptune {
+    z-index: 1;
+}
+
+/* Planet Color */
+#sun .planet {
+    background: linear-gradient(45deg, yellow, orange);
+    
+    box-shadow: rgba(255, 160, 60, 0.4) 0 0 60px;  /* light glow around */
+}
+
+#mercury .planet {
+    background: linear-gradient(45deg, lightgray, lightblue);
+}
+
+#venus .planet {
+    background: linear-gradient(45deg, white, grey);
+}
+
+#earth .planet {
+    background: linear-gradient(45deg, green, blue);
+}
+
+#moon .planet {
+    background: linear-gradient(45deg, white, lightgray);
+}
+
+#mars .planet {
+    background: linear-gradient(45deg, #c1440e, #e77d11);
+}
+
+#jupiter .planet {
+    background: linear-gradient(45deg, ivory, saddlebrown, ivory);
+}
+
+#saturn .planet {
+    background: linear-gradient(45deg, rosybrown, sandybrown, rosybrown);
+
+    & .ring::before {
+        opacity: 50%;
+    }
+
+    & #A-ring::before {
+        border: calc(0.05 * var(--planet-diameter)) solid rgb(161, 138, 106);
+    }
+
+    & #cassini-div::before {
+        border: calc(0.01 * var(--planet-diameter)) solid rgb(20, 20, 20);
+    }
+
+    & #B-ring::before {
+        border: calc(0.2 * var(--planet-diameter)) solid rgb(161, 138, 106);
+    }
+
+    & #C-ring::before {
+        border: calc(0.1 * var(--planet-diameter)) solid rgb(161, 138, 106);
+    }
+}
+
+#uranus .planet {
+    background: linear-gradient(45deg, lightskyblue, white);
+}
+
+#neptune .planet {
+    background: linear-gradient(45deg, lightblue, dodgerblue);
+}
+
+/* Planet data
+https://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html
+*/
+#sun {
+    --actual-orbit-duration: 0;
+    --actual-orbit-diameter: 0;
+    --actual-planet-diameter: 0;
+    --orbit-diameter: 0;
+    --planet-diameter: calc(7*var(--earth-diameter));
+}
+
+#mercury {
+    --actual-orbit-duration: calc(0.241s*var(--orbit-speed-scale));
+    --actual-orbit-diameter: calc(0.387*var(--earth-orbit-diameter));
+    --actual-planet-diameter: 0;
+    --orbit-diameter: calc(0.5*var(--earth-orbit-diameter));
+    --planet-diameter: calc(0.283*var(--earth-diameter));
+}
+
+#venus {
+    --actual-orbit-duration: calc(0.615s*var(--orbit-speed-scale));
+    --actual-orbit-diameter: calc(0.723*var(--earth-orbit-diameter));
+    --actual-planet-diameter: 0;
+    --orbit-diameter: calc(0.723*var(--earth-orbit-diameter));
+    --planet-diameter: calc(0.949*var(--earth-diameter));
+}
+
+#earth {
+    --actual-orbit-duration: calc(1s*var(--orbit-speed-scale));
+    --actual-orbit-diameter: var(--earth-orbit-diameter);
+    --actual-planet-diameter: 0;
+    --orbit-diameter: var(--earth-orbit-diameter);
+    --planet-diameter: var(--earth-diameter);
+
+    #moon {
+        --actual-orbit-duration: calc(0.0748s*var(--orbit-speed-scale));
+        --actual-orbit-diameter: calc(0.06*var(--earth-orbit-diameter));
+        --actual-planet-diameter: 0;
+        --orbit-diameter: calc(0.08*var(--earth-orbit-diameter));
+        --planet-diameter: calc(0.2724*var(--earth-diameter));
+    }
+}
+
+
+#mars {
+    --actual-orbit-duration: calc(1.88s*var(--orbit-speed-scale));
+    --actual-orbit-diameter: calc(1.52*var(--earth-orbit-diameter));
+    --actual-planet-diameter: 0;
+    --orbit-diameter: calc(1.4*var(--earth-orbit-diameter));
+    --planet-diameter: calc(0.714*var(--earth-diameter));
+}
+
+#jupiter {
+    --actual-orbit-duration: calc(11.9s*var(--orbit-speed-scale));
+    --actual-orbit-diameter: calc(5.2*var(--earth-orbit-diameter));
+    --actual-planet-diameter: 0;
+    --orbit-diameter: calc(1.8*var(--earth-orbit-diameter));
+    --planet-diameter: calc(5.21*var(--earth-diameter));
+}
+
+#saturn {
+    --actual-orbit-duration: calc(29.4s*var(--orbit-speed-scale));
+    --actual-orbit-diameter: calc(9.57*var(--earth-orbit-diameter));
+    --actual-planet-diameter: 0;
+    --orbit-diameter: calc(2.6*var(--earth-orbit-diameter));
+    --planet-diameter: calc(3.45*var(--earth-diameter));
+
+    & #A-ring {
+        --actual-orbit-duration: calc(29.4s*var(--orbit-speed-scale));
+        /*--actual-orbit-diameter: calc(9.57*var(--earth-orbit-diameter));*/
+        /*--actual-planet-diameter: 0;*/
+        --orbit-diameter: calc(var(--planet-diameter) + 0.15*var(--earth-orbit-diameter));
+    }
+
+    & #cassini-div {
+        --actual-orbit-duration: calc(29.4s*var(--orbit-speed-scale));
+        /*--actual-orbit-diameter: calc(9.57*var(--earth-orbit-diameter));*/
+        /*--actual-planet-diameter: 0;*/
+        --orbit-diameter: calc(var(--planet-diameter) + 0.13*var(--earth-orbit-diameter));
+    }
+
+    & #B-ring {
+        --actual-orbit-duration: calc(29.4s*var(--orbit-speed-scale));
+        /*--actual-orbit-diameter: calc(9.57*var(--earth-orbit-diameter));*/
+        /*--actual-planet-diameter: 0;*/
+        --orbit-diameter: calc(var(--planet-diameter) + 0.11*var(--earth-orbit-diameter));
+    }
+
+    & #C-ring {
+        --actual-orbit-duration: calc(29.4s*var(--orbit-speed-scale));
+        /*--actual-orbit-diameter: calc(9.57*var(--earth-orbit-diameter));*/
+        /*--actual-planet-diameter: 0;*/
+        --orbit-diameter: calc(var(--planet-diameter) + 0.07*var(--earth-orbit-diameter));
+    }
+}
+
+#uranus {
+    --actual-orbit-duration: calc(83.7s*var(--orbit-speed-scale));
+    --actual-orbit-diameter: calc(19.7*var(--earth-orbit-diameter));
+    --actual-planet-diameter: 0;
+    --orbit-diameter: calc(3.3*var(--earth-orbit-diameter));
+    --planet-diameter: calc(2.01*var(--earth-diameter));
+}
+
+#neptune {
+    --actual-orbit-duration: calc(163.7s*var(--orbit-speed-scale));
+    --actual-orbit-diameter: calc(30.18*var(--earth-orbit-diameter));
+    --actual-planet-diameter: 0;
+    --orbit-diameter: calc(3.9*var(--earth-orbit-diameter));
+    --planet-diameter: calc(1.88*var(--earth-diameter));
+}
