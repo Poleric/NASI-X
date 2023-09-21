@@ -3,8 +3,11 @@
 }
 
 * {
-    text-align: center;
     color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
 }
 
 header {
@@ -69,17 +72,19 @@ header {
     min-height: 100vh;
 }
 
-.fly-in-elems {
-    opacity: 0;
-    filter: blur(5px);
-    translate: -50%;
-    transition: all 1s;
-}
-
 .fly-in {
-    opacity: 1;
-    filter: blur(0);
-    translate: 0;
+    & > * {
+        opacity: 0;
+        filter: blur(5px);
+        translate: -50%;
+        transition: all 1s;
+    }
+
+    &.show > * {
+        opacity: 1;
+        filter: blur(0);
+        translate: 0;
+    }
 }
 
 @media (max-width: 850px) {

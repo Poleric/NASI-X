@@ -1,12 +1,12 @@
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add("fly-in");
+            entry.target.classList.add("show");
         } else {
-            entry.target.classList.remove("fly-in");
+            entry.target.classList.remove("show");
         }
     })
 })
 
-const flyInElements = document.querySelectorAll(".fly-in-elems")
+const flyInElements = document.querySelectorAll(".fly-in")
 flyInElements.forEach((elem) => observer.observe(elem));
