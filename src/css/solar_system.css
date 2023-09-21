@@ -17,35 +17,8 @@ body {
     background-color: var(--galaxy-color);
 }
 
-.header {
+header {
     background: linear-gradient(180deg, black, transparent);
-}
-
-.sections {
-    display: grid;
-    place-items: center;
-    align-content: center;
-}
-
-.section {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-.fly-in-elems {
-    opacity: 0;
-    filter: blur(5px);
-    translate: -50%;
-    transition: all 1s;
-}
-
-.fly-in {
-    opacity: 1;
-    filter: blur(0);
-    translate: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -204,6 +177,11 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(45deg, #c1440e, #e77d11);
 }
 
+#asteroid-belt::before {
+    border-image: radial-gradient(circle, white, grey);
+    opacity: 70%;
+}
+
 #jupiter .planet {
     background: linear-gradient(45deg, ivory, saddlebrown, ivory);
 }
@@ -283,7 +261,6 @@ https://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html
     }
 }
 
-
 #mars {
     --actual-orbit-duration: calc(1.88s*var(--orbit-speed-scale));
     --actual-orbit-diameter: calc(1.52*var(--earth-orbit-diameter));
@@ -292,11 +269,15 @@ https://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html
     --planet-diameter: calc(0.714*var(--earth-diameter));
 }
 
+#asteroid-belt {
+    --orbit-diameter: calc(1.7*var(--earth-orbit-diameter));
+}
+
 #jupiter {
     --actual-orbit-duration: calc(11.9s*var(--orbit-speed-scale));
     --actual-orbit-diameter: calc(5.2*var(--earth-orbit-diameter));
     --actual-planet-diameter: 0;
-    --orbit-diameter: calc(1.8*var(--earth-orbit-diameter));
+    --orbit-diameter: calc(2.1*var(--earth-orbit-diameter));
     --planet-diameter: calc(5.21*var(--earth-diameter));
 }
 
@@ -304,7 +285,7 @@ https://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html
     --actual-orbit-duration: calc(29.4s*var(--orbit-speed-scale));
     --actual-orbit-diameter: calc(9.57*var(--earth-orbit-diameter));
     --actual-planet-diameter: 0;
-    --orbit-diameter: calc(2.6*var(--earth-orbit-diameter));
+    --orbit-diameter: calc(2.9*var(--earth-orbit-diameter));
     --planet-diameter: calc(3.45*var(--earth-diameter));
 
     & #A-ring {
@@ -340,7 +321,7 @@ https://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html
     --actual-orbit-duration: calc(83.7s*var(--orbit-speed-scale));
     --actual-orbit-diameter: calc(19.7*var(--earth-orbit-diameter));
     --actual-planet-diameter: 0;
-    --orbit-diameter: calc(3.3*var(--earth-orbit-diameter));
+    --orbit-diameter: calc(3.6*var(--earth-orbit-diameter));
     --planet-diameter: calc(2.01*var(--earth-diameter));
 }
 
@@ -348,6 +329,6 @@ https://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html
     --actual-orbit-duration: calc(163.7s*var(--orbit-speed-scale));
     --actual-orbit-diameter: calc(30.18*var(--earth-orbit-diameter));
     --actual-planet-diameter: 0;
-    --orbit-diameter: calc(3.9*var(--earth-orbit-diameter));
+    --orbit-diameter: calc(4.2*var(--earth-orbit-diameter));
     --planet-diameter: calc(1.88*var(--earth-diameter));
 }
