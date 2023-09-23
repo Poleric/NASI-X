@@ -37,6 +37,12 @@ header {
     &::-webkit-scrollbar {
         display: none;
     }
+
+    & > * {
+        position: relative;
+        grid-row: 1;
+        grid-column: 1;
+    }
 }
 
 .place-in-orbit, .planet, .orbit .orbit {
@@ -48,8 +54,6 @@ header {
 
 .orbit {
     position: relative;
-    grid-row: 1;
-    grid-column: 1;
 
     width: var(--orbit-diameter);
     height: var(--orbit-diameter);
@@ -71,28 +75,36 @@ header {
         border-radius: 50%;
         opacity: 20%;
     }
+}
 
+/* planets text style */
+#solar-system {
     & span {
         position: absolute;
-        bottom: 100%;
-        left: 100%;
-        translate: calc(var(--planet-diameter) / 2) calc(var(--planet-diameter) / -2);
+        /* 30 deg to the right*/
+        bottom: calc(50% + 0.5 * var(--orbit-diameter) / 2);  /* sin(30) * hyp = opp */
+        left: calc(50% + 0.866 * var(--orbit-diameter) / 2 );  /* cos(30) * hyp = adj */
+        margin: 0.3em;
         opacity: 0;
-
         transition: opacity 0.3s;
+        text-shadow: black 1px 1px 2px;
+
+        user-select: none;
+        -webkit-user-select: none;
     }
 
-    &#saturn span {  /* saturn ring bicc */
-        translate: calc(var(--planet-diameter) / 1.4) calc(var(--planet-diameter) / -1.4);
+    & #sun span {
+        bottom: calc(50% + 0.5 * var(--planet-diameter) / 2);
+        left: calc(50% + 0.866 * var(--planet-diameter) / 2 );
     }
 
-    &:hover {
-        &::before {
-            opacity: 40%;
-        }
-
+    > *:hover {
         & span {
             opacity: 100%;
+        }
+
+        & .orbit:not(.ring)::before {
+            opacity: 40%;
         }
     }
 
@@ -101,10 +113,10 @@ header {
 .place-in-orbit {
     left: 100%;
 
-    animation-name: invert-orbit;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-duration: var(--orbit-duration);
+    /*animation-name: invert-orbit;*/
+    /*animation-iteration-count: infinite;*/
+    /*animation-timing-function: linear;*/
+    /*animation-duration: var(--orbit-duration);*/
 }
 
 .planet {
@@ -115,7 +127,6 @@ header {
 
 .ring {
     animation: none;
-    pointer-events: none;  /* disable on hover event */
 
     &::before {
         opacity: 100%;
