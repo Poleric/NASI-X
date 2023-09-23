@@ -29,11 +29,13 @@ header {
 #solar-system {
     display: grid;
     place-items: center;
+    padding: 2vh 10vw;
+    max-width: 95vw;
 
     overflow: auto;
-    width: 94vw;
-    height: 94vh;
 
+    /* hide scrollbar */
+    scrollbar-width: none;
     &::-webkit-scrollbar {
         display: none;
     }
