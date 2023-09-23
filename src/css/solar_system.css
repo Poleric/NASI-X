@@ -159,9 +159,33 @@ header {
     }
 }
 
-@media (prefers-reduced-motion) {
-    .fly-in-elems {
-        /*transition: none;*/
+* {
+    scroll-behavior: smooth !important;
+}
+
+.desc {
+    padding: 2em;
+
+    & h2 {
+        font-size: 2em;
+    }
+
+    & div {
+        display: flex;
+        flex-flow: row wrap;
+
+        & p {
+            font-size: 1.2em;
+            margin: 1em;
+            width: 50%;
+        }
+    }
+
+    /* right variant */
+    &.right {
+        & div {
+            justify-content: end;
+        }
     }
 }
 
