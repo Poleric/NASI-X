@@ -38,53 +38,94 @@ TODO: Make planet color more accurate
         <div class="section fly-in">
 
             <h1>The solar system representation</h1>
-            <div id="solar-system" style="transition-delay: 200ms;">
-                <div class="orbit" id="sun">
-                    <div class="planet"></div>
-                </div>
 
-                <div class="orbit" id="mercury">
-                    <div class="planet"></div>
-                </div>
-
-                <div class="orbit" id="venus">
-                    <div class="planet"></div>
-                </div>
-
-                <div class="orbit" id="earth">
-                    <div class="planet have-moon">
-                        <div class="orbit moon-orbit" id="moon">
+            <div class="section" id="solar-system-container" style="transition-delay: 200ms;">
+                <div id="solar-system">
+                    <div class="orbit" id="sun">
+                        <div class="place-in-orbit">
                             <div class="planet"></div>
                         </div>
                     </div>
-                </div>
 
-                <div class="orbit" id="mars">
-                    <div class="planet"></div>
-                </div>
+                    <div class="orbit" id="mercury">
+                        <div class="place-in-orbit">
+                            <div class="planet"></div>
 
-                <div class="orbit ring" id="asteroid-belt">
-                </div>
-
-                <div class="orbit" id="jupiter">
-                    <div class="planet"></div>
-                </div>
-
-                <div class="orbit" id="saturn">
-                    <div class="planet have-moon">
-                        <div class="orbit moon-orbit ring" id="A-ring"></div>
-                        <div class="orbit moon-orbit ring" id="cassini-div"></div>
-                        <div class="orbit moon-orbit ring" id="B-ring"></div>
-                        <div class="orbit moon-orbit ring" id="C-ring"></div>
+                            <span>Mercury</span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="orbit" id="uranus">
-                    <div class="planet"></div>
-                </div>
+                    <div class="orbit" id="venus">
+                        <div class="place-in-orbit">
+                            <div class="planet"></div>
 
-                <div class="orbit" id="neptune">
-                    <div class="planet"></div>
+                            <span>Venus</span>
+                        </div>
+                    </div>
+
+                    <div class="orbit" id="earth">
+                        <div class="place-in-orbit">
+                            <div class="planet"></div>
+
+                            <span>Earth</span>
+
+                            <div class="orbit moon-orbit" id="moon">
+                                <div class="place-in-orbit">
+                                    <div class="planet"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="orbit" id="mars">
+                        <div class="place-in-orbit">
+                            <div class="planet"></div>
+
+                            <span>Mars</span>
+                        </div>
+                    </div>
+
+                    <div class="orbit asteroid-belt inner"></div>
+                    <div class="orbit asteroid-belt middle"></div>
+                    <div class="orbit asteroid-belt another-middle"></div>
+                    <div class="orbit asteroid-belt outer"></div>
+
+                    <div class="orbit" id="jupiter">
+                        <div class="place-in-orbit">
+                            <div class="planet"></div>
+
+                            <span>Jupiter</span>
+                        </div>
+                    </div>
+
+                    <div class="orbit" id="saturn">
+                        <div class="place-in-orbit">
+                            <div class="planet"></div>
+
+                            <span>Saturn</span>
+
+                            <div class="orbit ring" id="A-ring"></div>
+                            <div class="orbit ring" id="cassini-div"></div>
+                            <div class="orbit ring" id="B-ring"></div>
+                            <div class="orbit ring" id="C-ring"></div>
+                        </div>
+                    </div>
+
+                    <div class="orbit" id="uranus">
+                        <div class="place-in-orbit">
+                            <div class="planet"></div>
+
+                            <span>Uranus</span>
+                        </div>
+                    </div>
+
+                    <div class="orbit" id="neptune">
+                        <div class="place-in-orbit">
+                            <div class="planet"></div>
+
+                            <span>Neptune</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

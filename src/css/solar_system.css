@@ -9,25 +9,41 @@
 
 /* TODO: tidy up planet size part. Use more constants em rather than calc. */
 
-html {
-    background-image: none;
-}
-
 body {
     background-color: var(--galaxy-color);
+    overflow-x: hidden;
 }
 
 header {
     background: linear-gradient(180deg, black, transparent);
 }
 
-#solar-system {
-    margin: 5% 1%;
+#solar-system-container {
+    margin: 2vw;
+    overflow: hidden;
+
+    background-color: black;
+    border-radius: 5em;
 }
 
-#solar-system, .have-moon {
+#solar-system {
     display: grid;
     place-items: center;
+
+    overflow: auto;
+    width: 94vw;
+    height: 94vh;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.place-in-orbit, .planet, .orbit .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
 }
 
 .orbit {
@@ -56,28 +72,45 @@ header {
         opacity: 20%;
     }
 
-    &:hover::before {
-        opacity: 40%;
+    & span {
+        position: absolute;
+        bottom: 100%;
+        left: 100%;
+        translate: calc(var(--planet-diameter) / 2) calc(var(--planet-diameter) / -2);
+        opacity: 0;
+
+        transition: opacity 0.3s;
     }
+
+    &#saturn span {  /* saturn ring bicc */
+        translate: calc(var(--planet-diameter) / 1.4) calc(var(--planet-diameter) / -1.4);
+    }
+
+    &:hover {
+        &::before {
+            opacity: 40%;
+        }
+
+        & span {
+            opacity: 100%;
+        }
+    }
+
+}
+
+.place-in-orbit {
+    left: 100%;
+
+    animation-name: invert-orbit;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: var(--orbit-duration);
 }
 
 .planet {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    translate: -50% -50%;
-
     width: var(--planet-diameter);
     height: var(--planet-diameter);
-
     border-radius: 50%;
-}
-
-.moon-orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
 }
 
 .ring {
@@ -89,12 +122,27 @@ header {
     }
 }
 
+.asteroid-belt:before {
+    opacity: 30%;
+    border-style: dotted;
+    border-width: 0.2em;
+}
+
 @keyframes orbit {
-    from {
+    0% {
         rotate: z 0deg;
     }
-    to {
+    100% {
         rotate: z -360deg;
+    }
+}
+
+@keyframes invert-orbit {
+    0% {
+        rotate: z 0deg;
+    }
+    100% {
+        rotate: z 360deg;
     }
 }
 
@@ -172,17 +220,14 @@ header {
     background: linear-gradient(45deg, #c1440e, #e77d11);
 }
 
-#asteroid-belt::before {
-    border-image: radial-gradient(circle, white, grey);
-    opacity: 70%;
-}
-
 #jupiter .planet {
     background: linear-gradient(45deg, ivory, saddlebrown, ivory);
 }
 
-#saturn .planet {
-    background: linear-gradient(45deg, rosybrown, sandybrown, rosybrown);
+#saturn {
+    .planet {
+        background: linear-gradient(45deg, rosybrown, sandybrown, rosybrown);
+    }
 
     & .ring::before {
         opacity: 50%;
@@ -248,23 +293,44 @@ https://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html
 
 #mars {
     --orbit-duration: calc(1.88s * var(--orbit-speed-scale));
-    --orbit-diameter: calc(1.4 * var(--earth-orbit-diameter));
+    --orbit-diameter: calc(1.3 * var(--earth-orbit-diameter));
     --planet-diameter: calc(0.714 * var(--earth-diameter));
 }
 
-#asteroid-belt {
+.asteroid-belt.inner {
+    --orbit-diameter: calc(1.65 * var(--earth-orbit-diameter));
+
+    &:before {
+        border-width: 0.19em;
+    }
+}
+.asteroid-belt.middle {
     --orbit-diameter: calc(1.7 * var(--earth-orbit-diameter));
+
+    &:before {
+        border-width: 0.34em;
+    }
+}
+.asteroid-belt.another-middle {
+     --orbit-diameter: calc(1.74 * var(--earth-orbit-diameter));
+ }
+.asteroid-belt.outer {
+    --orbit-diameter: calc(1.79 * var(--earth-orbit-diameter));
+
+    &:before {
+        border-width: 0.3em;
+    }
 }
 
 #jupiter {
     --orbit-duration: calc(11.9s * var(--orbit-speed-scale));
-    --orbit-diameter: calc(2.1 * var(--earth-orbit-diameter));
+    --orbit-diameter: calc(2.3 * var(--earth-orbit-diameter));
     --planet-diameter: calc(5.21 * var(--earth-diameter));
 }
 
 #saturn {
     --orbit-duration: calc(29.4s * var(--orbit-speed-scale));
-    --orbit-diameter: calc(2.9 * var(--earth-orbit-diameter));
+    --orbit-diameter: calc(3.1 * var(--earth-orbit-diameter));
     --planet-diameter: calc(3.45 * var(--earth-diameter));
 
     & #A-ring {
@@ -290,12 +356,12 @@ https://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html
 
 #uranus {
     --orbit-duration: calc(83.7s * var(--orbit-speed-scale));
-    --orbit-diameter: calc(3.6 * var(--earth-orbit-diameter));
+    --orbit-diameter: calc(3.7 * var(--earth-orbit-diameter));
     --planet-diameter: calc(2.01 * var(--earth-diameter));
 }
 
 #neptune {
     --orbit-duration: calc(163.7s * var(--orbit-speed-scale));
-    --orbit-diameter: calc(4.2 * var(--earth-orbit-diameter));
+    --orbit-diameter: calc(4.3 * var(--earth-orbit-diameter));
     --planet-diameter: calc(1.88 * var(--earth-diameter));
 }
