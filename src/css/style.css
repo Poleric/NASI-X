@@ -94,16 +94,28 @@ header {
 
 @media (max-width: 850px) {
     * {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .navbar {
-        display: none;
+        width: 100%;
+        margin: 1em;
+        padding: 0;
+
+        opacity: 0;
+        translate: 0 -100%;
+        transition-property: opacity, translate;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+
+        & a {
+            margin: auto;
+        }
 
         &.show {
             display: flex;
-            margin: 1em;
-            gap: 4em;
+            opacity: 1;
+            translate: none;
         }
     }
 
@@ -119,12 +131,26 @@ header {
 
     .dropdown-icon {
         position: absolute;
-        left: 92%;
-        transform: translateY(1px);
+        right: 5em;
+        top: 2em;
         margin-left: 0;
     }
 
     .section {
         min-height: 0;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .fly-in {
+        & > * {
+            /*transition: none;*/
+        }
+    }
+
+    @media (max-width: 850px) {
+        .navbar {
+            /*transition: none;*/
+        }
     }
 }
