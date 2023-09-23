@@ -93,8 +93,18 @@ header {
 }
 
 @media (max-width: 850px) {
+    * {
+        font-size: 8px;
+    }
+
     .navbar {
         display: none;
+
+        &.show {
+            display: flex;
+            margin: 1em;
+            gap: 4em;
+        }
     }
 
     header {
@@ -112,5 +122,9 @@ header {
         left: 92%;
         transform: translateY(1px);
         margin-left: 0;
+    }
+
+    .section {
+        min-height: 0;
     }
 }

@@ -1,12 +1,11 @@
-const nav = document.querySelector(".tabs-container");
+const navbar = document.querySelector(".navbar")
 
-const offset = nav.offsetTop;
+document.querySelector(".dropdown-icon").onclick = () => {
+    if (!matchMedia("(max-width: 850px)"))
+        return;
 
-window.addEventListener("scroll", function () {
-    if (window.scrollY >= offset) {
-        nav.classList.add("sticky");
-    }
-    else {
-        nav.classList.remove("sticky");
-    }
-});
+    if (navbar.classList.contains("show"))
+        navbar.classList.remove("show");
+    else
+        navbar.classList.add("show");
+}
