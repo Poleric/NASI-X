@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "title": "Hello forum?",
+        "posts": [
+            {
+                "content": "Hi, just recently seen the forum went up. Just dropping by to say hi.",
+                "author_details": {
+                    "name": "lorem1",
+                    "post_history": 2,
+                    "time_joined": "2023-09-19T03:29:01.780Z"
+                },
+                "time_posted": "2023-09-19T03:29:19.780Z"
+            },
+            {
+                "content": "Oh welcome to the forum :-) We are just starting out but we hope you will stay around. Thank you for being here.",
+                "author_details": {
+                    "name": "admin",
+                    "post_history": 10,
+                    "time_joined": "2023-09-01T02:29:30.780Z"
+                },
+                "time_posted": "2023-09-19T03:29:30.780Z"
+            },
+            {
+                "content": "Oh I'll be sticking around. Keep up the good work.",
+                "author_details": {
+                    "name": "lorem1",
+                    "post_history": 2,
+                    "time_joined": "2023-09-19T03:29:01.780Z"
+                },
+                "time_posted": "2023-09-19T03:30:02.780Z"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "title": "lorem",
+        "posts": [
+            {
+                "content": "lorem ipsum",
+                "author_details": {
+                    "name": "lorem",
+                    "post_history": 2,
+                    "time_joined": "2023-09-20T03:29:19.780Z"
+                },
+                "time_posted": "2023-09-24T03:29:19.780Z"
+            },
+            {
+                "content": "lorem ipsum",
+                "author_details": {
+                    "name": "ipsum",
+                    "post_history": 4,
+                    "time_joined": "2020-09-02T03:29:19.780Z"
+                },
+                "time_posted": "2023-09-25T03:29:19.780Z"
+            }
+        ]
+    }
+]
