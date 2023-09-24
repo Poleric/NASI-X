@@ -105,7 +105,7 @@ async function get_post_html(id, page) {
         let time = new Date(post.time_posted);
         let time_str = `${time.getFullYear()}-${time.getMonth()}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}`;
 
-        inner_html.innerHTML = `<div class="mini-title">${title}</div><div class="author">by <a href="./user.html?id=${author.id}">${author.name}</a> » ${time_str}</div><div class="content">${post.content}</div>`
+        inner_html.innerHTML = `<div class="mini-title">${title}</div><div class="author">#${i + 1} by <a href="./user.html?id=${author.id}">${author.name}</a> » <time datetime="${time.toJSON()}">${time_str}</time></div><div class="content">${post.content}</div>`
         html.append(inner_html);
     }
 

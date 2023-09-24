@@ -119,6 +119,7 @@ footer {
     display: flex;
     flex-flow: column;
     align-items: center;
+    font-size: 14px;
 
     & h1 {
         font-weight: normal;
@@ -129,17 +130,25 @@ footer {
         width: 100%;
     }
 
+    & .pages-details {
+        float: right;
+    }
+
     & .post {
         & > * {
-            margin: 5px;
+            margin: 4px;
         }
 
         & .mini-title {
-           font-size: 20px;
+           font-size: 1.5em;
         }
 
-        & .pages-details {
-            float: right;
+        & .author {
+            font-size: 0.8em;
+        }
+
+        & .content {
+            margin-top: 12px;
         }
     }
 }
