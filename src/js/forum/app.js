@@ -54,26 +54,19 @@ function get_url_param(param){
  * Renders and add post onto the DOM.
  */
 async function render_post_page() {
-    const html = await get_post_html();
-    document.body.append(html);
+    const post_id = get_url_param("id");
+    document.body.append(await get_post_html(post_id));
 }
 
 /**
  * Get the full forum post DOM html.
  * @return {HTMLDivElement} The DOM html for the entire post.
- * @param {Number} id The post id
+ * @param {String} id The post id
  */
 async function get_post_html(id) {
-    const post_id = get_url_param("id")
-    if (!post_id) {
-        console.log("ID parameter not found");
-        return get_404_html();
-    }
-
-    const post = await fetch_post(post_id);
-
+    const post = await fetch_post(id);
     if (!post) {
-        console.log(`id ${post_id} is not found.`);
+        console.log(`id ${id} is not found.`);
         return get_404_html();
     }
 
