@@ -32,14 +32,18 @@ async function get_post_html() {
         inner_html.innerHTML.trim();
         inner_html.classList.add("post");
 
+        let title;
         if (is_first) {
-            var title = post.title;
+            title = post.title;
             is_first = false;
         }
         else
             title = `Re: ${post.title}`
 
-        inner_html.innerHTML = `<div class="mini-title">${title}</div><div class="author-details">by ${message.author_details.name} ${message.time_posted}</div><div class="content">${message.content}</div>`
+        let time = new Date(message.time_posted);
+        let time_str = `${time.getFullYear()}-${time.getMonth()}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}`;
+
+        inner_html.innerHTML = `<div class="mini-title">${title}</div><div class="author-details">by ${message.author_details.name} » ${time_str}</div><div class="content">${message.content}</div>`
         html.append(inner_html);
     }
 
