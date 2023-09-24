@@ -1,9 +1,14 @@
 :root {
     --text-color: white;
+    --background-color: black;
 }
 
 * {
     color: var(--text-color);
+}
+
+body {
+    background-color: var(--background-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
