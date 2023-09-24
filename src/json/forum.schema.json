@@ -2,67 +2,89 @@
     "$schema": "https://json-schema.org/draft-07/schema",
     "$id": "https://example.com/posts.schema.json",
     "title": "Records of forum posts",
-    "type": "array",
-    "items": {
-        "description": "List of forum posts",
-        "type": "object",
-        "properties": {
-            "id": {
-                "description": "The unique identifier of the forum post",
-                "type": "integer"
-            },
-            "title": {
-                "description": "The title of the forum post",
-                "type": "string"
-            },
-            "posts": {
-                "type": "array",
-                "items": {
-                    "description": "List of messages and replies in the forum post",
-                    "type": "object",
-                    "properties": {
-                        "content": {
-                            "description": "The text content in the message",
-                            "type": "string"
-                        },
-                        "author_details": {
-                            "description": "The details of the author",
+    "type": "object",
+    "properties": {
+        "posts": {
+            "type": "array",
+            "items": {
+                "description": "List of forum posts",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "The unique identifier of the forum post",
+                        "type": "string"
+                    },
+                    "title": {
+                        "description": "The title of the forum post",
+                        "type": "string"
+                    },
+                    "posts": {
+                        "type": "array",
+                        "items": {
+                            "description": "List of messages and replies in the forum post",
                             "type": "object",
                             "properties": {
-                                "name": {
-                                    "description": "Name of the author",
+                                "content": {
+                                    "description": "The text content in the message",
                                     "type": "string"
                                 },
-                                "post_history": {
-                                    "description": "Number of post the author have done",
-                                    "type": "integer"
+                                "author_id": {
+                                    "description": "The user id of the author",
+                                    "type": "string"
                                 },
-                                "time_joined": {
-                                    "description": "The datetime the user registered the account",
+                                "time_posted": {
+                                    "description": "The datetime the user posted in the post",
                                     "type": "string"
                                 }
-                            }
-                        },
-                        "time_posted": {
-                            "description": "The datetime the user posted in the post",
-                            "type": "string"
+                            },
+                            "required": [
+                                "content",
+                                "author_id",
+                                "time_posted"
+                            ]
                         }
-                    },
-                    "required": [
-                        "content",
-                        "author_details",
-                        "time_posted"
-                    ]
-                }
-            }
+                    }
+                },
+                "required": [
+                    "id",
+                    "title",
+                    "posts"
+                ]
+            },
+            "required": [
+                "posts"
+            ]
         },
-        "required": [
-            "id",
-            "title",
-            "posts"
-        ]
-    },
-    "required": [
-        "posts"
-    ]
+        "users": {
+            "type": "array",
+            "items": {
+                "description": "List of users details",
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "description": "The unique identifier of the author",
+                        "type": "string"
+                    },
+                    "name": {
+                        "description": "Name of the author",
+                        "type": "string"
+                    },
+                    "post_history": {
+                        "description": "Number of post the author have done",
+                        "type": "integer"
+                    },
+                    "time_joined": {
+                        "description": "The datetime the user registered the account",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "name",
+                    "post_history",
+                    "time_joined"
+                ]
+            }
+        }
+    }
 }
