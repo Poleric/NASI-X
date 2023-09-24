@@ -173,19 +173,23 @@ header {
     & div {
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
+        margin: 2em;
 
         & p {
             font-size: 1.2em;
             margin: 1em;
-            width: 50%;
+            width: 40%;
+        }
+
+        & img {
+            width: 20%;
         }
     }
 
     /* right variant */
     &.right {
-        & div {
-            justify-content: end;
-        }
+
     }
 }
 
