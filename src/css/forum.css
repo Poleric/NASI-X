@@ -1,0 +1,151 @@
+:root {
+    --text-color: black;
+    --hyperlink-color: #105289;
+    --block-background-color: #ececec;;
+    --block-border-color: #a9b8c2;
+}
+
+a {
+    &:not(:hover) {
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+header {
+    & .top-header {
+        padding: 0.8em;
+
+        background: lightgrey;
+        border-bottom: grey 1px solid;
+
+        user-select: none;
+
+        & a {
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        & .return {
+            position: absolute;
+            translate: 0 -10%;
+
+            & .left-arrow {
+                font-size: 1.4em;
+            }
+        }
+
+        & .title {
+            margin-left: auto;
+            margin-right: auto;
+
+            & h1 {
+                font-size: 28px;
+                margin: 0;
+            }
+        }
+    }
+
+    & nav{
+        font-size: 13px;
+
+        &:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+    }
+}
+
+
+.horizontal-nav {
+    display: block;
+
+    & ul {
+        list-style: none;
+        margin: 0;
+
+        & li {
+            padding: 0 0.4em;
+
+            & a {
+                color: var(--hyperlink-color);
+            }
+
+            &:nth-of-type(1) {
+                float: left
+            }
+
+            &:not(:nth-of-type(1)) {
+                float: right;
+            }
+        }
+    }
+}
+
+.margin-sides {
+    margin: 5px 16px;
+}
+
+.block {
+    width: calc(100% - 32px);
+    background: var(--block-background-color);
+    border: var(--block-border-color) 1px solid;
+    margin: 5px 16px;
+    padding: 0.5em;
+}
+
+footer {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    font-size: 0.7em;
+
+    & nav {
+        font-size: 13px;
+    }
+}
+
+
+
+
+
+
+.posts {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    & h1 {
+        font-weight: normal;
+    }
+
+    & hr {
+        margin: 10px;
+        width: 100%;
+    }
+
+    & .post {
+        & > * {
+            margin: 5px;
+        }
+
+        & .mini-title {
+           font-size: 20px;
+        }
+
+        & .pages-details {
+            float: right;
+        }
+    }
+}
+
+.not-found {
+    .go-back {
+        margin: 20px;
+    }
+}
