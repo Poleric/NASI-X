@@ -1,8 +1,10 @@
 :root {
     --text-color: black;
     --hyperlink-color: #105289;
-    --block-background-color: #ececec;;
+    --block-background-color: #ececec;
     --block-border-color: #a9b8c2;
+    --block-lighter-background-color: #f5f5f5;
+    --block-header-background-color: #c4c4c4;
 }
 
 a {
@@ -16,9 +18,14 @@ h1, h2, h3 {
 }
 
 header {
-    & .top-header {
-        padding: 0.8em;
+    font-size: 14px;
 
+    & .top-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 0.8em;
         background: lightgrey;
         border-bottom: grey 1px solid;
 
@@ -31,7 +38,7 @@ header {
 
         & .return {
             position: absolute;
-            translate: 0 -10%;
+            left: 5px;
 
             & .left-arrow {
                 font-size: 1.4em;
@@ -39,9 +46,6 @@ header {
         }
 
         & .title {
-            margin-left: auto;
-            margin-right: auto;
-
             & h1 {
                 font-size: 28px;
                 margin: 0;
@@ -49,20 +53,14 @@ header {
         }
     }
 
-    & nav{
-        font-size: 13px;
-
-        &:after {
-            content: '';
-            clear: both;
-            display: block;
-        }
+    & nav {
+        font-size: 12px;
     }
 }
 
-
 .horizontal-nav {
     display: block;
+    padding: 6px;
 
     & ul {
         list-style: none;
@@ -84,77 +82,136 @@ header {
             }
         }
     }
-}
 
-.margin-sides {
-    margin: 5px 16px;
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
 }
 
 .block {
+    position: relative;
     width: calc(100% - 32px);
-    background: var(--block-background-color);
-    border: var(--block-border-color) 1px solid;
-    margin: 5px 16px;
-    padding: 0.5em;
+    margin-left: 16px;
+    margin-right: 16px;
+
+    & .block-header {
+        width: 100%;
+        background-color: var(--block-header-background-color);
+        border: var(--block-border-color) 1px solid;
+        border-bottom: none;
+
+        /* text centering */
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    & .block-content {
+        width: 100%;
+        background-color: var(--block-background-color);
+        border: var(--block-border-color) 1px solid;
+    }
 }
+
 
 footer {
     display: flex;
     flex-flow: column;
     align-items: center;
+    gap: 5px;
 
-    font-size: 0.7em;
+    font-size: 10px;
 
     & nav {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 
 
-
-
-
-
-.posts {
+.content {
     display: flex;
     flex-flow: column;
     align-items: center;
-    font-size: 14px;
+    font-size: 12px;
 
-    & h1 {
-        font-weight: normal;
+    --block-background-color: var(--block-lighter-background-color);
+
+    & h2 {
+        font-weight: lighter;
+        margin: 0;
     }
 
-    & hr {
-        margin: 10px;
-        width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    & > * {
+        margin-top: 2px;
+        margin-bottom: 2px;
     }
 
-    & .pages-details {
-        float: right;
+    & .post-header,
+    & .post-footer {
+        width: calc(100% - 32px);
+
+        & .reply {
+            padding: 5px 15px;
+            border: var(--block-border-color) 1px solid;
+            border-radius: 5px;
+            float: left;
+
+            text-decoration: none;
+            color: var(--hyperlink-color);
+
+            &:hover {
+                background: linear-gradient(var(--block-background-color), var(--block-lighter-background-color));
+            }
+        }
+
+        & .pages-details {
+            float: right;
+            font-size: 0.9em;
+        }
+    }
+
+    & .post-header {
+        & .pages-details {
+            margin-top: 12px;
+        }
     }
 
     & .post {
-        & > * {
-            margin: 4px;
-        }
 
-        & .mini-title {
-           font-size: 1.5em;
-        }
+        & .block-content {
+            padding: 6px;
 
-        & .author {
-            font-size: 0.8em;
-        }
+            & .mini-title {
+                margin-bottom: 2px;
+                font-size: 1.5em;
+            }
 
-        & .content {
-            margin-top: 12px;
+            & .author {
+                font-size: 0.8em;
+            }
+
+            & .post-content {
+                margin-top: 12px;
+            }
         }
     }
 }
 
 .not-found {
-    .go-back {
+    & hr {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    & .go-back {
         margin: 20px;
+        color: var(--hyperlink-color);
+    }
+
+    & .block-content {
+        padding: 10px;
     }
 }

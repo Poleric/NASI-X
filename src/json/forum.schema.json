@@ -43,12 +43,18 @@
                                 "time_posted"
                             ]
                         }
+                    },
+                    "views": {
+                        "description": "The number of user views on the forum post.",
+                        "type": "integer",
+                        "minimum": 0
                     }
                 },
                 "required": [
                     "id",
                     "title",
-                    "posts"
+                    "posts",
+                    "views"
                 ]
             },
             "required": [

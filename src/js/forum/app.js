@@ -57,31 +57,30 @@ function get_url_param(param){
 async function render_post_page(page) {
     const post_id = get_url_param("id");
     const html = await get_post_html(post_id, page);
-    document.body.querySelector("div.posts").replaceWith(html);
+    document.body.querySelector("div.content").replaceWith(html);
 }
 
 /**
  * Get the full forum post DOM html.
  * @return {HTMLDivElement} The DOM html for the entire post.
  * @param {String} id The post id
- * @param {Number} page The page number currently on. For pagination
+ * @param {Number} page The page number currently on. For pagination.
  */
 async function get_post_html(id, page) {
-    let html;
+    const html = document.createElement("div")
+    html.innerHTML.trim();
+    html.classList.add("content");
+
     const posts = await fetch_post(id);
     if (!posts) {
         console.log(`id ${id} is not found.`);
-        html = await get_404_html();
-        html.classList.add("posts");
-        html.classList.add("block");
+        html.innerHTML = get_404_html().innerHTML;
         return html;
     }
     const number_of_posts = Object.keys(posts.posts).length
 
-    html = document.createElement("div")
-    html.innerHTML.trim();
-    html.classList.add("posts");
-    html.innerHTML = `<h2>${posts.title}</h2><div class="pages-details">${number_of_posts} post(s) • Page <b>${page}</b> of <b>${Math.ceil(number_of_posts / posts_per_page)}</b></div>`;
+    html.innerHTML = `<h2>${posts.title}</h2><div class="post-header"><a href="" class="reply" title="Post a reply (This does not work lmao)">Post Reply</a><div class="pages-details">${number_of_posts} post(s) • Page <b>${page}</b> of <b>${Math.ceil(number_of_posts / posts_per_page)}</b></div></div>`;
+
     // might need to put it somewhere else
     document.title = `${posts.title} - NASI-X Forums`
 
@@ -93,22 +92,31 @@ async function get_post_html(id, page) {
         inner_html.innerHTML.trim();
         inner_html.classList.add("post");
         inner_html.classList.add("block");
-
-        let author = await fetch_user(post.author_id);
         let title;
         if (is_first) {
             title = posts.title;
+            inner_html.innerHTML += `<div class="block-header">Message</div>`;
             is_first = false;
         }
         else
-            title = `Re: ${posts.title}`
+            title = `Re: ${posts.title}`;
+
+        let content_html = document.createElement("div");
+        content_html.innerHTML.trim();
+        content_html.classList.add("block-content");
+        content_html.innerHTML = `<div class="mini-title">${title}</div>`;
+
+        let author = await fetch_user(post.author_id);
         let time = new Date(post.time_posted);
         let time_str = `${time.getFullYear()}-${time.getMonth()}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}`;
+        content_html.innerHTML += `<div class="author">#${i + 1} by <a href="./user.html?id=${author.id}">${author.name}</a> » <time datetime="${time.toJSON()}">${time_str}</time></div>`;
+        content_html.innerHTML += `<div class="post-content">${post.content}</div>`;
 
-        inner_html.innerHTML = `<div class="mini-title">${title}</div><div class="author">#${i + 1} by <a href="./user.html?id=${author.id}">${author.name}</a> » <time datetime="${time.toJSON()}">${time_str}</time></div><div class="content">${post.content}</div>`
+        inner_html.append(content_html);
         html.append(inner_html);
     }
 
+    html.innerHTML += `<div class="post-footer"><a href="" class="reply" title="Post a reply (This does not work lmao)">Post Reply</a><div class="pages-details">${number_of_posts} post(s) • Page <b>${page}</b> of <b>${Math.ceil(number_of_posts / posts_per_page)}</b></div>`
     return html;
 }
 
@@ -119,7 +127,6 @@ async function get_post_html(id, page) {
 function get_404_html() {
     let html = document.createElement("div")
     html.innerHTML.trim();
-    html.classList.add("not-found");
-    html.innerHTML = `<h2>404 Not Found</h2><hr><a href='./' class="go-back"><h3>Would you like to go back?</h3></a>`;
+    html.innerHTML = `<div class="block not-found"><div class="block-content"><h2>404 Not Found</h2><hr><a href='./' class="go-back"><h3>Would you like to go back?</h3></a></div></div>`;
     return html;
 }
