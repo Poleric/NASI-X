@@ -17,6 +17,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
+    position: absolute;
+    width: 100%;
     display: grid;
     grid-template-columns: auto 1fr auto;
     justify-content: center;
