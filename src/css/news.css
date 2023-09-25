@@ -37,7 +37,6 @@ header{
 }
 
 .title span{
- 
     text-transform: uppercase;
     display: block;
 }
@@ -57,7 +56,6 @@ header{
     font-size: 80px;
     font-weight: 600;
     color: #778899;
-    
 }
 
 h1{
@@ -66,6 +64,7 @@ h1{
 
 .text{
     font-size: 55px;
+    margin: auto;
 }
 
 @keyframes text{
@@ -81,4 +80,8 @@ h1{
         letter-spacing: 8px;
         margin-bottom: -90px;
     }
+}
+
+p{
+    font-size: 22px;
 }
