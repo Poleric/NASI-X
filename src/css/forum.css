@@ -17,6 +17,10 @@ h1, h2, h3 {
     text-align: center;
 }
 
+th {
+    font-weight: normal;
+}
+
 header {
     font-size: 14px;
 
@@ -103,7 +107,11 @@ header {
         border-bottom: none;
 
         /* text centering */
-        padding: 5px 0;
+        padding: 5px;
+        & td,
+        & th {
+            padding: 5px ;
+        }
         text-align: center;
     }
 
@@ -113,7 +121,6 @@ header {
         border: var(--block-border-color) 1px solid;
     }
 }
-
 
 footer {
     display: flex;
@@ -128,12 +135,19 @@ footer {
     }
 }
 
+.content {
+    .posts-list {
+        border-collapse: collapse;
+    }
+}
+
+
 
 .content {
     display: flex;
     flex-flow: column;
     align-items: center;
-    font-size: 12px;
+    font-size: 14px;
 
     --block-background-color: var(--block-lighter-background-color);
 
@@ -179,23 +193,24 @@ footer {
         }
     }
 
-    & .post {
+    & .block-header {
+        font-size: 0.9em;
+    }
 
-        & .block-content {
-            padding: 6px;
+    & .block-content {
+        padding: 6px 6px 20px 6px;
 
-            & .mini-title {
-                margin-bottom: 2px;
-                font-size: 1.5em;
-            }
+        & .mini-title {
+            margin-bottom: 2px;
+            font-size: 1.5em;
+        }
 
-            & .author {
-                font-size: 0.8em;
-            }
+        & .author {
+            font-size: 0.8em;
+        }
 
-            & .post-content {
-                margin-top: 12px;
-            }
+        & .post-content {
+            margin-top: 12px;
         }
     }
 }
