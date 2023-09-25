@@ -17,6 +17,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
+    position: absolute;
+    width: 100%;
     display: grid;
     grid-template-columns: auto 1fr auto;
     justify-content: center;
@@ -48,7 +50,7 @@ header {
     color: #e8e8e8;
     font-size: 1.3em;
     font-weight: 550;
-    word-spacing: 0.6em;
+    word-spacing: 0.4em;
 
     /* underline effects */
     & span {
@@ -143,7 +145,7 @@ header {
     }
 
     .section {
-        min-height: 0;
+        /*min-height: 0;*/
     }
 }
 
