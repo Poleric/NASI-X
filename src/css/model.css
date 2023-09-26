@@ -1,6 +1,7 @@
 :root {
     --text-color: #E0EFDE; /* Honeydew */
     --galaxy-color: #0e0e19;
+    --desc-background-color: black;
 
     --earth-diameter: 0.8em;
     --earth-orbit-diameter: 15em;
@@ -14,14 +15,12 @@ body {
 }
 
 header {
-    background: linear-gradient(180deg, black, transparent);
+    background: linear-gradient(black, transparent);
 }
 
 #solar-system-container {
-    margin: 2vw;
     overflow: hidden;
 
-    background-color: black;
     border-radius: 5em;
 }
 
@@ -30,6 +29,9 @@ header {
     place-items: center;
     padding: 2vh 10vw;
     max-width: 95vw;
+
+    background-color: black;
+    border-radius: 5em;
 
     overflow: auto;
 
@@ -162,33 +164,65 @@ header {
     scroll-behavior: smooth !important;
 }
 
+
+.sections {
+    overflow: hidden;
+}
+
 .desc {
-    padding: 2em;
+    width: 60%;
+    align-self: start;
+
+    margin: 40px;
+    padding: 20px 40px 40px 40px;
+
+    background-color: var(--desc-background-color);
+    border-radius: 20px;
+    overflow: hidden;
 
     & h2 {
         font-size: 2em;
+        margin: 20px;
+        font-weight: bold;
     }
 
-    & div {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin: 2em;
+    & img {
+        max-width: 30%;
+        height: auto;
+    }
 
-        & p {
-            font-size: 1.2em;
-            margin: 1em;
-            width: 40%;
+    & p {
+        display: inline-block;
+        width: calc(70%);
+    }
+
+    & .left,
+    & .right {
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
         }
+    }
 
+    & .left {
         & img {
-            width: 20%;
+            float: left;
         }
     }
 
-    /* right variant */
-    &.right {
+    & .right {
+        & img {
+            float: right;
+        }
+    }
 
+
+    &.left {
+        align-self: start;
+    }
+    &.right {
+        align-self: end;
     }
 }
 

@@ -8,6 +8,7 @@
 }
 
 body {
+    max-width: 100%;
     background-color: var(--background-color);
     overflow-x: hidden;
 }
