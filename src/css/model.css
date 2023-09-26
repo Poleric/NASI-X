@@ -173,7 +173,7 @@ header {
     width: 60%;
     align-self: start;
 
-    margin: 40px;
+    margin: 40px 8%;
     padding: 20px 40px 40px 40px;
 
     background-color: var(--desc-background-color);
