@@ -138,10 +138,34 @@ footer {
 .content {
     .posts-list {
         border-collapse: collapse;
+
+        & tbody {
+            & td {
+                padding: 4px 8px;
+            }
+
+            & td:nth-of-type(1) {
+                font-size: 1.1em;
+                width: 70%;
+            }
+
+            & td:nth-of-type(2),
+            & td:nth-of-type(3) {
+                text-align: center;
+                width: 5%;
+            }
+
+            & td:nth-of-type(4) {
+                font-size: 0.9em;
+                width: 20%;
+            }
+        }
+
+        & img {
+            float: right;
+        }
     }
 }
-
-
 
 .content {
     display: flex;

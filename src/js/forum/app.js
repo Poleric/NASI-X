@@ -93,23 +93,22 @@ async function get_posts_list_html(page) {
         let last_message = post.posts[number_of_post_messages-1];
 
         let row_html = table_body.insertRow(j);
-        row_html.classList.add("block-content");
 
         let author = await fetch_user(first_message.author_id);
         let time = new Date(first_message.time_posted);
         let time_str = `${time.getFullYear()}-${time.getMonth()}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}`;
-        row_html.innerHTML = "<td>"
+        row_html.innerHTML = "<td class='block-content'>"
             + `<div><a href="./posts.html?id=${post.id}">${post.title}</a></div>`
             + `<div class="author">by <a href="./user.html?id=${author.id}">${author.name}</a> » <time datetime="${time.toJSON()}">${time_str}</time></div>`
             + "</td>";
 
-        row_html.innerHTML += `<td>${number_of_post_messages - 1}</td>`;
-        row_html.innerHTML += `<td>${post.views}</td>`;
+        row_html.innerHTML += `<td class="block-content">${number_of_post_messages - 1}</td>`;
+        row_html.innerHTML += `<td class="block-content">${post.views}</td>`;
 
         author = await fetch_user(last_message.author_id);
         time = new Date(last_message.time_posted);
         time_str = `${time.getFullYear()}-${time.getMonth()}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}`;
-        row_html.innerHTML += "<td>"
+        row_html.innerHTML += "<td class='block-content'>"
             + `<div class="last-post">by <a href="./user.html?id=${author.id}">${author.name}</a><br><time datetime="${time.toJSON()}">${time_str}</time></div>`
             + "</td>";
     }
@@ -178,6 +177,7 @@ async function get_post_html(id, page) {
         let time = new Date(post_message.time_posted);
         let time_str = `${time.getFullYear()}-${time.getMonth()}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}`;
         content_html.innerHTML += `<div class="author">#${i + 1} by <a href="./user.html?id=${author.id}">${author.name}</a> » <time datetime="${time.toJSON()}">${time_str}</time></div>`;
+        content_html.innerHTML += "<hr>";
         content_html.innerHTML += `<div class="post-content">${post_message.content}</div>`;
 
         inner_html.append(content_html);
