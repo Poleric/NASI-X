@@ -180,6 +180,11 @@ footer {
         margin: 0;
     }
 
+    & hr {
+        margin-top: 4px;
+        width: 100%;
+    }
+
     margin-top: 5px;
     margin-bottom: 5px;
     & > * {
@@ -240,17 +245,14 @@ footer {
 }
 
 .not-found {
-    & hr {
-        margin: 10px 0;
-        width: 100%;
+    & .block-content {
+        & > * {
+            margin: 10px 0;
+        }
     }
 
     & .go-back {
         margin: 20px;
         color: var(--hyperlink-color);
-    }
-
-    & .block-content {
-        padding: 10px;
     }
 }
