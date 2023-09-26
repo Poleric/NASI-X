@@ -33,18 +33,6 @@ body {
     grid-column: span 2 / auto;
 }
 
-.title {
-    min-height: 90vh;
-    text-align: center;
-    font-family: sans-serif;
-    width: 100%;
-}
-
-header{
-    position: absolute;
-    width: 100%;
-}
-
 .title span{
  
     text-transform: uppercase;
