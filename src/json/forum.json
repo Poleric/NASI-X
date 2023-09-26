@@ -38,6 +38,33 @@
                 }
             ],
             "views": 4
+        },
+        {
+            "id": "3",
+            "title": "WE ARE ALL GONNA DIE!",
+            "posts": [
+                {
+                    "content": "Guys, i have googled that there is a asteroid the size of New York that will kill us all in 24 hours. What you gonna do in this last 24 hours since we all gonna die.",
+                    "author_id": "3",
+                    "time_posted": "2023-09-26T10:58:10.780Z"
+                },
+                {
+                    "content": "Are you kidding, I still havent finish my anime yet. I only on episode 200 of 1650. This is literal hell.",
+                    "author_id": "4",
+                    "time_posted": "2023-09-26T11:14:10.780Z"
+                },
+                {
+                    "content": "Yes yes yes we will ALL dieeeee.",
+                    "author_id": "3",
+                    "time_posted": "2023-09-26T11:25:10.780Z"
+                },
+                {
+                    "content": "I want to eat fried chicken <img src=\"https://media.istockphoto.com/id/452813985/photo/plate-of-fried-chicken-on-blue-plaid-towel.jpg?s=612x612&w=0&k=20&c=e_03DvZFXhvbMR5eBiflKJ2nnQnoaBnufrT37h6Wf7s=\" height=\"240px\">",
+                    "author_id": "7",
+                    "time_posted": "2023-09-26T13:56:50.780Z"
+                }
+            ],
+            "views": 6
         }
     ],
     "users": [
@@ -54,9 +81,15 @@
             "time_joined": "2023-09-01T02:29:30.780Z"
         },
         {
+            "id": "3",
+            "name": "Lim Kah Lok",
+            "post_history": 2,
+            "time_joined": "2023-09-26T06:31:30.780Z"
+        },
+        {
             "id": "4",
             "name": "lorem1",
-            "post_history": 2,
+            "post_history": 3,
             "time_joined": "2023-09-19T03:29:01.780Z"
         },
         {
@@ -70,6 +103,12 @@
             "name": "ipsum",
             "post_history": 1,
             "time_joined": "2020-09-02T03:29:19.780Z"
+        },
+        {
+            "id": "7",
+            "name": "chicken man",
+            "post_history": 1,
+            "time_joined": "2023-09-22T11:45:15.780Z"
         }
     ]
 }
