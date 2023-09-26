@@ -171,7 +171,7 @@ async function get_post_html(id, page) {
         let content_html = document.createElement("div");
         content_html.innerHTML.trim();
         content_html.classList.add("block-content");
-        content_html.innerHTML += `<div class="mini-title">${title}</div>`;
+        content_html.innerHTML += `<div class="mini-title">${title}<img src="https://www.svgrepo.com//show/220662/like.svg" class="like-button" alt=""></div>`;
 
         let author = await fetch_user(post_message.author_id);
         let time = new Date(post_message.time_posted);
