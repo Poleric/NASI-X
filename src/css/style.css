@@ -1,16 +1,13 @@
 :root {
     --text-color: white;
-    --background-color: black;
-}
-
-* {
-    color: var(--text-color);
+    --background-color: #0e0e19;
 }
 
 body {
     max-width: 100%;
     background-color: var(--background-color);
     overflow-x: hidden;
+    color: var(--text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
