@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Feedback</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/feedback.css">
+    <script defer src="../js/main.js"></script>
+</head>
+<body>
+    <header style="position: relative">
+        <a href="index.html" class="logo">NASI-X</a>
+
+        <nav class="navbar">
+            <a href="home.html"><span>HOME</span></a>
+            <a href="study.html"><span>STUDY</span></a>
+            <a href="model.html"><span>MODEL</span></a>
+            <a href="news.html"><span>NEWS</span></a>
+            <a href="forum/index.html"><span>FORUM</span></a>
+            <a href="additionalResource.html"><span>RESOURCES</span></a>
+        </nav>
+
+        <img class="dropdown-icon" src="../img/dropdown_icon.png" alt="">
+    </header>
+
+    <div class="section" >
+        <h1>Submit a Feedback</h1>
+
+        <form action="" method="post" accept-charset="UTF-8">
+
+            <div class="input-field required">
+                <label for="feedback-name">Your name</label>
+                <input type="text" name="feedback-name" id="feedback-name" required>
+            </div>
+
+            <div class="input-field optional">
+                <label for="feedback-email">Your email address</label>
+                <input type="email" name="feedback-email" id="feedback-email">
+            </div>
+
+            <div class="input-field required">
+                <label for="feedback-title">Subject</label>
+                <input type="text" name="feedback-email" id="feedback-title" required>
+            </div>
+
+            <div class="input-field required">
+                <label for="feedback-content">Description</label>
+                <textarea name="feedback-content" id="feedback-content" required></textarea>
+            </div>
+
+            <div class="input-field optional">
+                <label for="feedback-attachments">Attachments</label>
+                <input type="file" name="feedback-attachments" id="feedback-attachments" multiple="multiple">
+            </div>
+
+            <input type="checkbox" name="feedback-contact" id="feedback-contact">
+            <label for="feedback-contact">I would like to be contacted.</label>
+
+            <input type="submit" name="submit" value="Send">
+        </form>
+    </div>
+</body>
+</html>
