@@ -46,6 +46,10 @@ header {
         grid-row: 1;
         grid-column: 1;
     }
+
+    & a {
+        color: var(--text-color);
+    }
 }
 
 .place-in-orbit, .planet, .orbit .orbit {
@@ -88,9 +92,11 @@ header {
         bottom: calc(50% + 0.5 * var(--orbit-diameter) / 2);  /* sin(30) * hyp = opp */
         left: calc(50% + 0.866 * var(--orbit-diameter) / 2 );  /* cos(30) * hyp = adj */
         margin: 0.3em;
+        padding: 2px;
         opacity: 0;
         transition: opacity 0.3s;
-        text-shadow: black 1px 1px 2px;
+        backdrop-filter: blur(10px) opacity(0.8);
+        border-radius: 0.3em;
 
         user-select: none;
         -webkit-user-select: none;
@@ -169,6 +175,10 @@ header {
     overflow: hidden;
 }
 
+.section {
+    width: 100%;
+}
+
 .desc {
     width: 60%;
     align-self: start;
@@ -194,6 +204,14 @@ header {
     & p {
         display: inline-block;
         width: calc(70%);
+    }
+
+    & hr {
+        margin-bottom: 1em;
+    }
+
+    & ul {
+        list-style-position: inside;
     }
 
     & .left,
@@ -225,6 +243,14 @@ header {
         align-self: end;
     }
 }
+
+@media (max-width: 920px) {
+    .desc {
+        align-self: center !important;
+        width: 90%;
+    }
+}
+
 
 /* Planet order */
 #sun {
