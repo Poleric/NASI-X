@@ -2,6 +2,31 @@ body {
     font-family: sans-serif;
 }
 
+.bokeh {
+    position: absolute;
+    background: radial-gradient(circle, var(--bokeh-color), transparent 100%);
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(50px);
+    --bokeh-color: rgb(144, 9, 241);
+
+    &:nth-of-type(1) {
+        width: 400px;
+        height: 250px;
+        top: 55%;
+        left: 0;
+        filter: blur(100px);
+    }
+
+    &:nth-of-type(2) {
+        width: 140px;
+        height: 200px;
+        top: 20%;
+        left: 80%;
+    }
+}
+
+
 .news {
     display: grid;
     place-items: center;
@@ -53,13 +78,18 @@ body {
 .text2 {
     font-size: 80px;
     font-weight: 600;
-    color: #778899;
+    color: #d2472c;
 }
 
-.text {
+.bntxt {
     font-size: 55px;
     margin: auto;
+    background: rgb(79, 155, 221);
+    box
+    
 }
+
+
 
 @keyframes stretch_reveal{
     0% {
@@ -85,3 +115,4 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
