@@ -226,6 +226,14 @@ header {
     }
 }
 
+@media (max-width: 920px) {
+    .desc {
+        align-self: center !important;
+        width: 90%;
+    }
+}
+
+
 /* Planet order */
 #sun {
     z-index: 10;
