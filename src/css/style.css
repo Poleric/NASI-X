@@ -82,7 +82,7 @@ footer{
     text-align:center;
 }
 
-.fly-in {
+.fly-in-all {
     & > * {
         opacity: 0;
         filter: blur(5px);
@@ -101,6 +101,25 @@ footer{
         translate: 0;
     }
 }
+
+.fly-in-self {
+    opacity: 0;
+    filter: blur(5px);
+    translate: -50%;
+    transition-property: filter, translate;
+    transition-duration: 1.1s;
+
+    &.right {
+        translate: 50%;
+    }
+
+    &.show {
+        opacity: 1;
+        filter: blur(0);
+        translate: 0;
+    }
+}
+
 
 @media (max-width: 850px) {
     * {
@@ -152,7 +171,7 @@ footer{
 }
 
 @media (prefers-reduced-motion) {
-    .fly-in {
+    .fly-in-all {
         & > * {
             /*transition: none;*/
         }
