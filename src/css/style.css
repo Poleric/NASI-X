@@ -78,6 +78,10 @@ header {
     min-height: 100vh;
 }
 
+footer{
+    text-align:center;
+}
+
 .fly-in {
     & > * {
         opacity: 0;
