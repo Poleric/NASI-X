@@ -6,14 +6,10 @@ html{
     padding-top:2em;
 }
 
-& .richard2{
-    & img{
-        float:left
-    }
+.richard23{
+    float:left;
 }
 
-& .richard2{
-    & h2{
-        float:right;
-    }
-}
+
+
+
