@@ -19,6 +19,10 @@ body {
         max-width: 100%;
         height: auto
     }
+
+    & p {
+        font-size: 22px;
+    }
 }
 
 .tall {
@@ -29,8 +33,8 @@ body {
     grid-column: span 2 / auto;
 }
 
-
-.title span {
+.title span{
+ 
     text-transform: uppercase;
     display: block;
 }
@@ -54,6 +58,7 @@ body {
 
 .text {
     font-size: 55px;
+    margin: auto;
 }
 
 @keyframes stretch_reveal{

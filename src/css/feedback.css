@@ -1,0 +1,99 @@
+h1 {
+    font-family: monospace;
+}
+
+form {
+    width: 60%;
+    padding: 35px;
+    background-color: #1c1c1c;
+    border-radius: 5%;
+
+    color: #e3e3e3;
+    font-size: 16px;
+    font-family: monospace;
+
+    & input,
+    & textarea {
+        border: grey 1px solid;
+        box-shadow: black 1px 1px 2px;
+        background-color: #e3e3e3;
+    }
+
+    & .input-field {
+        margin-bottom: 35px;
+
+        & label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        & input,
+        & textarea {
+            padding: 15px 20px;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        & textarea {
+            line-height: 1.6em;
+            min-height: 11em;
+        }
+
+        & input[type="file"] {
+            text-align: center;
+            color: black;
+        }
+
+        & textarea {
+            height: 5em;
+            resize: vertical;
+        }
+    }
+
+    & input[type="checkbox"] {
+        margin: 0 4px;
+        scale: 1.2;
+    }
+
+    & input[type="submit"] {
+        display: block;
+        margin-top: 30px;
+        padding: 8px 20px;
+
+        font-family: inherit;
+        font-size: 1.1em;
+        border-radius: 8px;
+
+        transition: background-color, color;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+
+        &:hover {
+            background-color: #afd1ee;
+            color: midnightblue;
+        }
+    }
+}
+
+.input-field {
+    &.required {
+        & label {
+            &:after {
+                content: '*';
+                color: crimson;
+            }
+        }
+    }
+
+    &.optional {
+        & label {
+            &:after {
+                content: '(optional)';
+                font-size: 0.8em;
+                vertical-align: super;
+            }
+        }
+    }
+}

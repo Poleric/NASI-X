@@ -138,10 +138,30 @@ footer {
 .content {
     .posts-list {
         border-collapse: collapse;
+
+        & tbody {
+            & td {
+                padding: 4px 8px;
+            }
+
+            & td:nth-of-type(1) {
+                font-size: 1.1em;
+                width: 70%;
+            }
+
+            & td:nth-of-type(2),
+            & td:nth-of-type(3) {
+                text-align: center;
+                width: 5%;
+            }
+
+            & td:nth-of-type(4) {
+                font-size: 0.9em;
+                width: 20%;
+            }
+        }
     }
 }
-
-
 
 .content {
     display: flex;
@@ -152,8 +172,14 @@ footer {
     --block-background-color: var(--block-lighter-background-color);
 
     & h2 {
+        font-size: 26px;
         font-weight: lighter;
         margin: 0;
+    }
+
+    & hr {
+        margin-top: 4px;
+        width: 100%;
     }
 
     margin-top: 5px;
@@ -203,6 +229,23 @@ footer {
         & .mini-title {
             margin-bottom: 2px;
             font-size: 1.5em;
+
+            & .like-button {
+                float: right;
+                padding: 4px;
+                height: 1.6em;
+
+                border: var(--block-border-color) 1px solid;
+                border-radius: 0.2em;
+
+                opacity: 0;
+                transition: opacity 0.1s linear;
+
+                &:hover {
+                    filter: invert(14%) sepia(97%) saturate(2913%) hue-rotate(195deg) brightness(93%) contrast(87%);  /* make #105289 color */
+                    border-color: var(--hyperlink-color);
+                }
+            }
         }
 
         & .author {
@@ -210,23 +253,39 @@ footer {
         }
 
         & .post-content {
+            display: flex;
+            justify-content: start;
+
             margin-top: 12px;
+
+            & img {
+                margin: 0 1em;
+            }
+        }
+
+        &:hover {
+            & .like-button {
+                opacity: 1;
+            }
         }
     }
 }
 
 .not-found {
-    & hr {
-        margin: 10px 0;
-        width: 100%;
+    & .block-content {
+        & > * {
+            margin: 10px 0;
+        }
     }
 
     & .go-back {
         margin: 20px;
         color: var(--hyperlink-color);
     }
+}
 
-    & .block-content {
-        padding: 10px;
+@media (prefers-reduced-motion) {
+    .like-button {
+        transition: none !important;
     }
 }

@@ -3,14 +3,11 @@
     --background-color: rgb(4, 4, 35);
 }
 
-* {
-    color: var(--text-color);
-}
-
 body {
     max-width: 100%;
     background-color: var(--background-color);
     overflow-x: hidden;
+    color: var(--text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
