@@ -10,6 +10,13 @@ html{
     float:left;
 }
 
+.left {
+    & img,
+    & .description {
+        float: left;
+    }
+}
+
 
 
 
