@@ -189,6 +189,7 @@ header {
     background-color: var(--desc-background-color);
     border-radius: 20px;
     overflow: hidden;
+    line-height: 1.5;
 
     & h2 {
         font-size: 2em;
