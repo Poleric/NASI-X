@@ -24,24 +24,28 @@
     padding-top:7.5em;
 }
 
-p{
-    text-align:center;
-    text-shadow:0px 0px 2.5px;
-}
+
 
 .ff{
     & p,
     & .zz{
+        padding-top:3em;
         font-size:65px;
-    
+}
+}
 
+.xx{
+    & p,
+    & .ll{
+        padding-top:3em;
+        font-size:40px;
 }
 }
 
 .yy{
     & p,
     & .tt{
-        font-size:30px;
+        font-size:40px;
     }
 }
 
@@ -64,12 +68,17 @@ p{
     }
 }
 
-.people{
-    padding-top:10em;
+.gg{
+    & img{
+        margin: 0 auto;
+        font-size:60px;
+    }
 }
 
+
+
 .er{
-    padding-top:5em;
+    padding-top:3em;
     font-size:100px;
 }
 
@@ -78,6 +87,27 @@ p{
     font-size:100px;
 }
 
+.ty{
+    font-size:100px;
+    padding-top:1em;
+}
+
+.yu{
+    padding-bottom:1.25em;
+}
+
+.ss{
+    padding-top:3em;
+    font-size:65px;
+}
+
+.jj{
+    font-size:40px;
+}
+
+.uu{
+    padding-top:5em;
+}
 
 
 h1 {
@@ -90,28 +120,41 @@ h1 {
 
 @-webkit-keyframes color-change {
     0% { color: rgb(235, 242, 232); }
-    50% { color: rgb(235, 242, 232); }
-    100% { color: rgb(178, 180, 22); }
+    50% { color: rgb(21, 180, 170); }
+    100% { color: rgb(67, 64, 130); }
 }
 @-moz-keyframes color-change {
     0% { color: rgb(235, 242, 232); }
-    50% { color:rgb(67, 64, 130); }
-    100% { color: rgb(178,180,22); }
+    50% { color:rgb(21, 180, 170); }
+    100% { color: rgb(67,64,130); }
 }
 @-ms-keyframes color-change {
     0% { color: rgb(235, 242, 232); }
-    50% { color:rgb(67, 64, 130); }
-    100% { color: rgb(178,180,22); }
+    50% { color:rgb(21, 180, 170); }
+    100% { color: rgb(67,64,130); }
 }
 @-o-keyframes color-change {
     0% { color: rgb(235, 242, 232); }
-    50% { color:rgb(67, 64, 130) }
-    100% { color: rgb(178,180,22); }
+    50% { color:rgb(21,180, 170) }
+    100% { color: rgb(67,64,130); }
 }
 @keyframes color-change {
     0% { color: rgb(235, 242, 232); }
-    50% { color:rgb(67, 64, 130) }
-    100% { color:rgb(178,180,22); }
+    50% { color:rgb(21, 180, 170) }
+    100% { color:rgb(67,64,130); }
 }
+
+p {
+    text-align:center;
+    text-shadow:0px 0px 2.5px;
+    background-color: #333;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 20vh;
+  }
+  
+
+
 
 
