@@ -80,6 +80,34 @@ header {
 
 footer{
     text-align:center;
+    margin:10px;
+}
+
+footer div.left{
+    float:left;
+    width:50%;
+}
+
+footer div.right{
+    margin-left:50%;
+    width:50%;
+}
+
+footer h1.fcontent{
+    margin:10px;
+}
+
+a.down:link{
+    color:blue;
+}
+
+a.down:visited{
+    color:blueviolet;
+}
+
+a.down:hover{
+    color:orange;
+    text-decoration:none;
 }
 
 .fly-in-all {
