@@ -1,6 +1,7 @@
 :root {
     --text-color: white;
-    --background-color: rgb(4, 4, 35);
+    --background-color: #11111f;
+    ;
 }
 
 body {
@@ -80,9 +81,37 @@ header {
 
 footer{
     text-align:center;
+    margin:10px;
 }
 
-.fly-in {
+footer div.left{
+    float:left;
+    width:50%;
+}
+
+footer div.right{
+    margin-left:50%;
+    width:50%;
+}
+
+footer h1.fcontent{
+    margin:10px;
+}
+
+a.down:link{
+    color:blue;
+}
+
+a.down:visited{
+    color:blueviolet;
+}
+
+a.down:hover{
+    color:orange;
+    text-decoration:none;
+}
+
+.fly-in-all {
     & > * {
         opacity: 0;
         filter: blur(5px);
@@ -101,6 +130,25 @@ footer{
         translate: 0;
     }
 }
+
+.fly-in-self {
+    opacity: 0;
+    filter: blur(5px);
+    translate: -50%;
+    transition-property: filter, translate;
+    transition-duration: 1.1s;
+
+    &.right {
+        translate: 50%;
+    }
+
+    &.show {
+        opacity: 1;
+        filter: blur(0);
+        translate: 0;
+    }
+}
+
 
 @media (max-width: 850px) {
     * {
@@ -152,7 +200,7 @@ footer{
 }
 
 @media (prefers-reduced-motion) {
-    .fly-in {
+    .fly-in-all {
         & > * {
             /*transition: none;*/
         }

@@ -8,5 +8,5 @@ const observer = new IntersectionObserver((entries) => {
     })
 })
 
-const flyInElements = document.querySelectorAll(".fly-in")
+const flyInElements = document.querySelectorAll(".fly-in-all,.fly-in-self")
 flyInElements.forEach((elem) => observer.observe(elem));
