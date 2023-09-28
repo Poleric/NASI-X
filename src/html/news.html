@@ -9,12 +9,38 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/news.css">
     <title>NASI-X NEWS PAGE</title>
+    
 </head>
 
 <body>
+    <!--
+    <div class="bokeh"></div>
+    <div class="bokeh"></div>
+    <div class="bokeh"></div>
+-->
 
-    <div class="bokeh"></div>
-    <div class="bokeh"></div>
+
+
+    <script type="x-shader/x-vertex" id="vertexshader">
+    attribute float size;
+              varying vec3 vColor;
+              void main() {
+                  vColor = color;
+                  vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+                  gl_PointSize = size * ( 300.0 / -mvPosition.z );
+                  gl_Position = projectionMatrix * mvPosition;
+              }
+          </scr>
+
+    <script type="x-shader/x-fragment" id="fragmentshader">
+    uniform sampler2D pointTexture;
+              varying vec3 vColor;
+              void main() {
+                  gl_FragColor = vec4( vColor, 1.0 );
+                  gl_FragColor = gl_FragColor * texture2D( pointTexture, gl_PointCoord );
+              }
+    </script>
+
 
     <header>
         <a href="index.html" class="logo">NASI-X</a>
@@ -48,6 +74,7 @@
                     <p class="caption-content"> --- "Alien Cropse found in MALYASIA"</p>
                 </div>
             </div>
+
             <div class="content2 wide">
                 <img src="../img/How-to-Setup-a-base-on-Moon.jpg" alt="" class="cover-photo">
 
@@ -66,7 +93,10 @@
                     Station.</p>
                 <br>
                 <br>
+                <hr>
+                <p class="footer1">&nbsp;&nbsp;UPDATED BY NILON M</p>
                 <br>
+
             </div>
 
             <div class="content4">
@@ -85,16 +115,29 @@
                 </div>
             </div>
 
-            <div class="content">
-                <h1>Lorem ipsum dolor sit amet5.</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam atque aspernatur qui dolorem?
-                    Facere, eum.</p>
+            <div class="content6">
+                <img src="../img/cooperate.jpg" alt="" class="cover-photo">
+
+                <div class="caption">
+                    <p class="caption-content">---"NASI-X cooperate with <b>NERV</b> company."</p>
+                </div>
             </div>
 
-            <div class="content">
-                <h1>Lorem ipsum dolor sit amet5.</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam atque aspernatur qui dolorem?
-                    Facere, eum.</p>
+            <div class="content7 wide tall">
+                <img src="../img/clowncarsat.jpg" alt="" class="cover-photo">
+
+                <div class="caption">
+                    <p class="caption-content">--- "Congratulations,the latest satellite name 'EVANGELION-01' launched
+                        successful."</p>
+                </div>
+            </div>
+
+            <div class="content7 wide tall">
+                <img src="../img/Launcher-Cover.jpg" alt="" class="cover-photo">
+
+                <div class="caption">
+                    <p class="caption-content">--- "New version launcher was in progress."</p>
+                </div>
             </div>
 
         </div>
