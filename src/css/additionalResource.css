@@ -1,5 +1,11 @@
-.richard23{
-    float:left;
+.addr{
+    font-size:100px;
+    text-shadow: 0px 0px 100px;
+    -webkit-animation: color-change 10s infinite;
+    -moz-animation: color-change 10s infinite;
+    -o-animation: color-change 10s infinite;
+    -ms-animation: color-change 10s infinite;
+    animation: color-change 10s infinite;
 }
 
 .left {
@@ -7,12 +13,105 @@
     & .description {
         float: left;
     }
+
 }
 
 .description {
-    font-size: 14px;
+    font-size: 14px
+}
+
+.et{
+    padding-top:7.5em;
+}
+
+p{
+    text-align:center;
+    text-shadow:0px 0px 2.5px;
+}
+
+.ff{
+    & p,
+    & .zz{
+        font-size:65px;
+    
+
+}
+}
+
+.yy{
+    & p,
+    & .tt{
+        font-size:30px;
+    }
 }
 
 
+
+.dd{
+    padding-top:10em;
+    & p{font-size:30px;
+    }
+    & h1{
+        font-size:45px;
+    }
+
+}
+
+.pp{
+    & img{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.people{
+    padding-top:10em;
+}
+
+.er{
+    padding-top:5em;
+    font-size:100px;
+}
+
+.ed{
+    padding-top:2em;
+    font-size:100px;
+}
+
+
+
+h1 {
+    -webkit-animation: color-change 10s infinite;
+    -moz-animation: color-change 10s infinite;
+    -o-animation: color-change 10s infinite;
+    -ms-animation: color-change 10s infinite;
+    animation: color-change 10s infinite;
+}
+
+@-webkit-keyframes color-change {
+    0% { color: rgb(235, 242, 232); }
+    50% { color: rgb(235, 242, 232); }
+    100% { color: rgb(178, 180, 22); }
+}
+@-moz-keyframes color-change {
+    0% { color: rgb(235, 242, 232); }
+    50% { color:rgb(67, 64, 130); }
+    100% { color: rgb(178,180,22); }
+}
+@-ms-keyframes color-change {
+    0% { color: rgb(235, 242, 232); }
+    50% { color:rgb(67, 64, 130); }
+    100% { color: rgb(178,180,22); }
+}
+@-o-keyframes color-change {
+    0% { color: rgb(235, 242, 232); }
+    50% { color:rgb(67, 64, 130) }
+    100% { color: rgb(178,180,22); }
+}
+@keyframes color-change {
+    0% { color: rgb(235, 242, 232); }
+    50% { color:rgb(67, 64, 130) }
+    100% { color:rgb(178,180,22); }
+}
 
 
