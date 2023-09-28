@@ -1,0 +1,58 @@
+.title{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    animation: slide;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
+    animation-duration: 1.5s;
+}
+
+.title h1{
+    margin-top: -32%;
+}
+
+@keyframes slide{
+    from{margin-right: 50%;}
+    to{margin-right: 0%;}
+    0%{opacity: 0;}
+    50%{transform: scale(-1,1);}
+}
+
+.study_level{
+    position: absolute;
+    margin-top: -8%;
+    z-index: -1;
+    animation: study;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
+    animation-duration: 1.5s;
+
+}
+
+.study_level a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color:#e8e8e8;
+    padding: 10px;
+}
+
+.primary{
+    display: inline-block;
+}
+
+.secondary{
+    display: inline-block;
+}
+
+.tertiary{
+    display: inline-block;
+}
+
+@keyframes study{
+    0%{opacity: 0;}
+}
