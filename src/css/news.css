@@ -194,6 +194,17 @@
     color: #ff2a00;
 }
 
+.more-news{
+    background-color: #4060c2;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
 @keyframes stretch_reveal{
     0% {
         margin-bottom: -90px;
