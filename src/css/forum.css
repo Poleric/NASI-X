@@ -299,14 +299,17 @@ footer {
 /* user.html */
 .content {
     & .user-info {
+        position: relative;
         display: grid;
-        grid-template-columns: minmax(20%, auto) 1fr;
+        grid-template-columns: minmax(30%, auto) 1fr;
 
-        & .user-left {
+        & .user-left,
+        & .user-right {
             display: flex;
             flex-flow: column nowrap;
             justify-items: start;
             align-items: center;
+            gap: 5px;
 
             & .avatar {
                 align-self: center;
@@ -317,7 +320,22 @@ footer {
             & ul {
                 list-style: none;
                 & li {
+                    display: flex;
+                    flex-flow: row nowrap;
                     margin-top: 0.6em;
+                    max-width: 100%;
+
+                    & .info {
+                        word-wrap: break-word;
+                        line-height: 1.25;
+                        margin: 0 0.5em;
+                    }
+
+                    &.last-post {
+                        & time {
+                            font-size: 0.8em;
+                        }
+                    }
                 }
             }
         }

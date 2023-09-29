@@ -141,7 +141,7 @@ async function get_post_html(id, page) {
 
     const posts = await fetch_post(id);
     if (!posts) {
-        console.log(`id ${id} is not found.`);
+        console.log(`post id ${id} is not found.`);
         html.innerHTML = get_404_html().innerHTML;
         return html;
     }
@@ -176,9 +176,9 @@ async function get_post_html(id, page) {
         let author = await fetch_user(post_message.author_id);
         let time = new Date(post_message.time_posted);
         let time_str = `${time.getFullYear()}-${time.getMonth()}-${time.getDate()} ${time.getHours()}:${time.getMinutes()}`;
-        content_html.innerHTML += `<div class="author">#${i + 1} by <a href="./user.html?id=${author.id}">${author.name}</a> » <time datetime="${time.toJSON()}">${time_str}</time></div>`;
-        content_html.innerHTML += "<hr>";
-        content_html.innerHTML += `<div class="post-content">${post_message.content}</div>`;
+        content_html.innerHTML += `<div class="author">#${i + 1} by <a href="./user.html?id=${author.id}">${author.name}</a> » <time datetime="${time.toJSON()}">${time_str}</time></div>`
+             + "<hr>"
+             +  `<div class="post-content">${post_message.content}</div>`;
 
         inner_html.append(content_html);
         html.append(inner_html);
@@ -197,3 +197,80 @@ function get_404_html() {
     html.innerHTML = `<div class="block not-found"><div class="block-content"><h2>404 Not Found</h2><hr><a href='./' class="go-back"><h3>Would you like to go back?</h3></a></div></div>`;
     return html;
 }
+
+/**
+ * Renders and add user onto the DOM.
+ */
+async function render_user_page() {
+    const user_id = get_url_param("id");
+    const html = await get_user_html(user_id);
+    document.body.querySelector("div.content").replaceWith(html);
+}
+
+/**
+ * Get the html content of a user
+ * @param {String} id The user id
+ * @return {HTMLDivElement}
+ */
+async function get_user_html(id) {
+    const html = document.createElement("div")
+    html.classList.add("content");
+
+    const user = await fetch_user(id);
+    if (!user) {
+        console.log(`user id ${id} is not found.`);
+        html.innerHTML = get_404_html().innerHTML;
+        return html;
+    }
+    const [last_thread, last_post] = await fetch_user_last_post(id);
+
+    time_joined = new Date(user.time_joined);
+    time_joined_str = `${time_joined.getFullYear()}-${time_joined.getMonth()}-${time_joined.getDate()} ${time_joined.getHours()}:${time_joined.getMinutes()}`;
+    if (last_thread) {
+        var last_post_time = new Date(last_post.time_posted);
+        var last_post_time_str = `${last_post_time.getFullYear()}-${last_post_time.getMonth()}-${last_post_time.getDate()} ${last_post_time.getHours()}:${last_post_time.getMinutes()}`;
+    }
+
+    html.innerHTML += `<h2>Viewing profile - ${user.name}</h2>`;
+    html.innerHTML = "<div class='block'><div class='user-info'>"
+        + "<div class='block-header'>User Info</div><div class='block-header'>Other Infos</div>"
+        + `<div class='block-content user-left'>`
+        + (user.avatar_url ? `<img src="${user.avatar_url}" alt="" class='avatar' width="250px">` : "")
+        + "<ul>"
+        + `<li><div class='info-field'>Username:</div><div class='info'>${user.name}</div></li>`
+        + `<li><div class='info-field'>Time joined:</div><div class="info"><time datetime="${time_joined.toJSON()}">${time_joined_str}</time></div></li>`
+        + `<li><div class='info-field'>Number of posts:</div><div class="info">${user.post_history}</div></li>`
+        + (last_thread ? `<li class="last-post"><div class='info-field'>Last post:</div><div class="info">in <a href="./posts.html?id=${last_thread.id}">${last_thread.title}</a> at <time datetime="${last_post_time.toJSON()}">${last_post_time_str}</time></div></li>` : "")
+        + `<li class='bio'><div class='info-field'>Bio:</div><div class='info'>${user.bio}</div></li>`
+        + "</ul>"
+        + "</div>"
+        + "<div class='block-content user-right'>"
+        + `<div>User is thanked a total of <b>${user.thanks}</b> times.</div>`
+        + (last_thread ? ("<div class='last-post block'><div class='block-header'>Last post</div><div class='block-content'>"
+        + `<div class="mini-title">${last_thread.title}</div>`
+        + `<div class="author">by <a href="./user.html?id=${user.id}">${user.name}</a> » <time datetime="${last_post_time.toJSON()}">${last_post_time_str}</time></div>`
+        + "<hr>"
+        + `<div class="post-content">${last_post.content}</div>`
+        + "</div></div>") : "")
+        + "</div>"
+        + "</div></div>";
+
+    return html;
+}
+
+/**
+ * Shorthand for retrieving the post data of user last post.
+ * @param id {String} User id
+ * @return {Array[JSON]} THe post data of the user last post
+ */
+async function fetch_user_last_post(id) {
+    const user = await fetch_user(id);
+    if (!user.last_post_id)
+        return [null, null];
+
+    const [post_id, index] = user.last_post_id.split("-");
+
+    const thread = await fetch_post(post_id);
+    return [thread, thread.posts[parseInt(index)]];  // god i love looking at the shit filled code i made
+}
+
