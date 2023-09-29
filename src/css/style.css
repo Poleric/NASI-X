@@ -1,7 +1,6 @@
 :root {
     --text-color: white;
     --background-color: #11111f;
-    ;
 }
 
 body {
@@ -38,6 +37,7 @@ header {
     justify-content: center;
     align-items: center;
 
+    margin: 0 8%;
     padding-left: 8%;
     padding-right: 8%;
     gap: 5%;
@@ -98,15 +98,15 @@ footer h1.fcontent{
     margin:10px;
 }
 
-a.down:link{
+footer a:link{
     color:blue;
 }
 
-a.down:visited{
-    color:blueviolet;
+footer a:visited{
+    color:blue;
 }
 
-a.down:hover{
+footer a:hover{
     color:orange;
     text-decoration:none;
 }
