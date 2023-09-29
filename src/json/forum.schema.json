@@ -82,6 +82,14 @@
                     "time_joined": {
                         "description": "The datetime the user registered the account",
                         "type": "string"
+                    },
+                    "last_post_id": {
+                        "description": "The post id of the users last post. Format as `<post_id>-<post_index>` where post_id is the id of the main thread, and post_index is the index of the post in the thread",
+                        "type": "string"
+                    },
+                    "avatar_url": {
+                        "description": "The avatar url of the user",
+                        "type": "string"
                     }
                 },
                 "required": [
