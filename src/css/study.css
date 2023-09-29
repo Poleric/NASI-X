@@ -1,10 +1,13 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .title{
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-
     animation: slide;
     animation-play-state: running;
     animation-timing-function: ease-out;
@@ -24,13 +27,11 @@
 
 .study_level{
     position: absolute;
-    margin-top: -8%;
-    z-index: -1;
+    margin-top: -6.9%;
     animation: study;
     animation-play-state: running;
     animation-timing-function: ease-out;
     animation-duration: 1.5s;
-
 }
 
 .study_level a{
@@ -38,7 +39,7 @@
     font-size: 30px;
     font-weight: bold;
     color:#e8e8e8;
-    padding: 10px;
+    padding: 15px;
 }
 
 .primary{
@@ -55,4 +56,21 @@
 
 @keyframes study{
     0%{opacity: 0;}
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+}
+
+section #primary_page{
+    left: 0%;
+}
+
+#sp{
+
+}
+
+#tg{
+    
 }
