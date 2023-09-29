@@ -90,13 +90,18 @@
                     "avatar_url": {
                         "description": "The avatar url of the user",
                         "type": "string"
+                    },
+                    "bio": {
+                        "description": "The short biography of the user",
+                        "type": "string"
                     }
                 },
                 "required": [
                     "id",
                     "name",
                     "post_history",
-                    "time_joined"
+                    "time_joined",
+                    "bio"
                 ]
             }
         }
