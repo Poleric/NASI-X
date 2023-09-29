@@ -19,10 +19,6 @@ dt{
         text-decoration: underline;
         color:aqua;
     }
-
-    & a:visited {
-
-    }
 }
 
 
@@ -32,6 +28,10 @@ dd{
     font-size:21px;
     line-height: 1.25;
 
+}
+
+.glossary{
+    padding-top:2em;
 }
 
 
