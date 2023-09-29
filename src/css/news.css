@@ -144,89 +144,35 @@ body {
     }
 }
 
+.read-more {
+    position: absolute;
+    bottom: 2%;
 
-.content9 {
-    width: 100%;
-    height: 100%;
-    position: relative;
     display: flex;
-    justify-content: end;
-    flex-flow: column;
-
-    & img {
-        object-fit: cover;
-        max-width: 100%;    
-        height: auto;
-    }
-    & img.cover-photo {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        z-index: -1;
-    }
-
-    & p {
-        font-size: 22px;
-    }
-
-    & .caption {
-        & .caption-heading {
-            font-size: 20px;
-            display: inline-block;
-            padding: 10px;
-            margin: 0;
-            background-color: rgba(79, 155, 221, 0.6);
-            color: white;
-        }
-
-        & .caption-content {
-            font-size: 20px;
-            font-weight: 700;
-            display: block;
-            width: 100%;
-            padding: 10px;
-            background-color: rgba(236, 236, 236, 0.75);
-            color: var(--background-color);
-        }
-    }
-}
-
-#trending{
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
     text-align: center;
-    background: #15418c;
-    color: white;
-    margin-top: 15px;
-    font-size: 17px;
-    font-weight: 600;
-    padding-top: 8px;
-    margin-left: 0px;
-    margin-right: 0px;
-    height: 40px;
-    cursor: pointer;
-}
-.col-md-12{
-    float: left;
-}
-.col-md-12{
-    width: 100%;
-}
-.col-md-12,.col-sm-12{
-    position: relative;
-    min-height: 1px;
-    padding-left: 7.5px;
-    padding-left: 7.5px;
+
+    & .arrows {
+        width: 6px;
+        & .arrow {
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            padding: 3px;
+            rotate: 45deg;
+            animation: animate-arrow 1s infinite linear 3s;
+        }
+    }
 }
 
-
-
-.tall {
-    grid-row: span 2 / 0.5;
-    min-height: 480px;
-}
-
-.tall1{
-    grid-row: span 2 / 0.5;
-    min-height: 350px;
+@keyframes animate-arrow {
+    0% {
+        translate: 0 0;
+    }
+    100% {
+        translate: 0 50%;
+    }
 }
 
 
