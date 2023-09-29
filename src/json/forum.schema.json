@@ -94,6 +94,11 @@
                     "bio": {
                         "description": "The short biography of the user",
                         "type": "string"
+                    },
+                    "thanks": {
+                        "description": "Number of \"likes\" given to the user",
+                        "type": "integer",
+                        "minimum": 0
                     }
                 },
                 "required": [
@@ -101,7 +106,8 @@
                     "name",
                     "post_history",
                     "time_joined",
-                    "bio"
+                    "bio",
+                    "thanks"
                 ]
             }
         }
