@@ -21,6 +21,10 @@ th {
     font-weight: normal;
 }
 
+li {
+    list-style-position: inside;
+}
+
 header {
     font-size: 14px;
 
@@ -113,12 +117,31 @@ header {
             padding: 5px ;
         }
         text-align: center;
+        font-weight: bold;
     }
 
     & .block-content {
         width: 100%;
         background-color: var(--block-background-color);
         border: var(--block-border-color) 1px solid;
+    }
+}
+
+.home-link {
+    font-weight: bold;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        float: left;
+
+        height: 1em;
+        width: 1em;
+        background-image: url("../img/house.svg");
+        background-size: contain;
+        filter: invert(14%) sepia(97%) saturate(2913%) hue-rotate(195deg) brightness(93%) contrast(87%);
+
+        margin-right: 0.4em;
     }
 }
 
@@ -135,6 +158,7 @@ footer {
     }
 }
 
+/* index.html */
 .content {
     .posts-list {
         border-collapse: collapse;
@@ -163,6 +187,7 @@ footer {
     }
 }
 
+/* posts.html */
 .content {
     display: flex;
     flex-flow: column;
@@ -185,8 +210,8 @@ footer {
     margin-top: 5px;
     margin-bottom: 5px;
     & > * {
-        margin-top: 2px;
-        margin-bottom: 2px;
+        margin-top: 3px;
+        margin-bottom: 3px;
     }
 
     & .post-header,
@@ -266,6 +291,34 @@ footer {
         &:hover {
             & .like-button {
                 opacity: 1;
+            }
+        }
+    }
+}
+
+/* user.html */
+.content {
+    & .user-info {
+        display: grid;
+        grid-template-columns: minmax(20%, auto) 1fr;
+
+        & .user-left {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-items: start;
+            align-items: center;
+
+            & .avatar {
+                align-self: center;
+                border: var(--block-border-color) 1px solid;
+                padding: 5px;
+            }
+
+            & ul {
+                list-style: none;
+                & li {
+                    margin-top: 0.6em;
+                }
             }
         }
     }

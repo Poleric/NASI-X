@@ -1,0 +1,52 @@
+.img-navs {
+    position: relative;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+
+    margin: 10px;
+}
+
+.img-nav {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    transition: filter 0.1s linear;
+
+    & img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    & a {
+        color: white;
+    }
+
+    & .nav-text {
+        position: absolute;
+        top: 0;
+
+        display: flex;
+        width: 100%;
+        height: calc(100% + 1px);
+        justify-content: center;
+        align-items: center;
+
+        opacity: 0;
+        font-size: 60px;
+        font-weight: bolder;
+
+        transition: opacity 0.1s linear;
+    }
+
+    &:hover {
+        & .nav-text {
+            backdrop-filter: brightness(0.5);
+            opacity: 1;
+        }
+    }
+}
