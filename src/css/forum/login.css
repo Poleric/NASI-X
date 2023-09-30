@@ -1,0 +1,53 @@
+.block-content {
+    padding: 10px;
+
+    & hr {
+        margin: 5px 0;
+    }
+
+    & .block-content {
+        margin-bottom: 20px;
+    }
+
+    & form {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: 10px;
+
+        & input {
+            padding: 2px 4px;
+        }
+
+        & .input-field {
+            width: 100%;
+            & label {
+                display: inline-block;
+                width: 15%;
+                font-size: 0.9em;
+            }
+
+            & input {
+                display: inline-block;
+                min-width: 20%;
+            }
+
+            & input[type="checkbox"] {
+                margin-left: calc(15% + 4px);
+                min-width: 0;
+                width: max-content;
+            }
+        }
+
+        & hr {
+            width: 100%;
+            margin-bottom: 0;
+        }
+
+        & input[type="submit"] {
+            border-radius: 4px;
+            width: max-content;
+        }
+    }
+
+}

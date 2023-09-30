@@ -137,7 +137,7 @@ header {
 
         height: 1em;
         width: 1em;
-        background-image: url("../img/house.svg");
+        background-image: url("../../img/house.svg");
         background-size: contain;
         filter: invert(14%) sepia(97%) saturate(2913%) hue-rotate(195deg) brightness(93%) contrast(87%);
 
