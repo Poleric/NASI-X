@@ -8,6 +8,7 @@ body {
     background-color: var(--background-color);
     overflow-x: hidden;
     color: var(--text-color);
+    scroll-behavior: smooth !important;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -77,6 +78,30 @@ header {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+}
+
+.scroll-up {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 98%;
+    left: 99%;
+    translate: -100% -100%;
+    width: 40px;
+    height: 40px;
+    background-color: darkslateblue;
+    border-radius: 50%;
+    z-index: 99;
+}
+
+.up-arrow {
+    width: 20px;
+    height: 20px;
+    border: solid lightslategrey;
+    border-width: 0 3px 3px 0;
+    margin-top: 9px;
+    rotate: 225deg;
 }
 
 footer{

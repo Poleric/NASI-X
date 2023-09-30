@@ -98,6 +98,37 @@ body {
     }
   }
 
+  .read-more {
+    position: absolute;
+    bottom: 2%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    text-align: center;
+
+    & .arrows {
+        width: 6px;
+        & .arrow {
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            padding: 3px;
+            rotate: 45deg;
+            animation: animate-arrow 1s infinite linear 3s;
+        }
+    }
+}
+
+@keyframes animate-arrow {
+    0% {
+        translate: 0 0;
+    }
+    100% {
+        translate: 0 50%;
+    }
+}
+
 
 h1 {
     margin: 0;

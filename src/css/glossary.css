@@ -1,5 +1,5 @@
 dl{ 
-    margin:0px 30px;
+    margin:0 30px;
     padding-left:1em;
 }
 
@@ -18,10 +18,6 @@ dt{
     & a:active {
         text-decoration: underline;
         color:aqua;
-    }
-
-    & a:visited {
-
     }
 }
 

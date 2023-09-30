@@ -90,13 +90,24 @@
                     "avatar_url": {
                         "description": "The avatar url of the user",
                         "type": "string"
+                    },
+                    "bio": {
+                        "description": "The short biography of the user",
+                        "type": "string"
+                    },
+                    "thanks": {
+                        "description": "Number of \"likes\" given to the user",
+                        "type": "integer",
+                        "minimum": 0
                     }
                 },
                 "required": [
                     "id",
                     "name",
                     "post_history",
-                    "time_joined"
+                    "time_joined",
+                    "bio",
+                    "thanks"
                 ]
             }
         }
