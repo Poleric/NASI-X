@@ -159,11 +159,53 @@
                 },
                 {
                     "content":"你在说什么东西？？？",
-                    "author_id":"7",
+                    "author_id":"12",
+                    "time_posted":"2023-10-20T22:46:33.105366"
+                },
+                {
+                    "content":"我也觉得地球是平的，怎么会有人觉得地球是圆形啊",
+                    "author_id":"11",
+                    "time_posted":"2023-10-20T22:46:33.105366"
+                },
+                {
+                    "content":"地球是圆形的，都有照片可以看了",
+                    "author_id":"10",
+                    "time_posted":"2023-10-20T22:46:33.105366"
+                },
+                {
+                    "content":"No, That picture of the earth was a lie to you all.",
+                    "author_id":"13",
                     "time_posted":"2023-10-20T22:46:33.105366"
                 }
             ],
-            "views": 1787
+            "views": 17871
+        },
+        {
+            "id": "8",
+            "title": "Today got super moon.",
+            "posts": [
+                {
+                    "content": "At Kuala Lumpur",
+                    "author_id": "10",
+                    "time_posted": "2023-09-29T22:45:33.105366"
+                },
+                {
+                    "content":"I also see it",
+                    "author_id":"9",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                },
+                {
+                    "content":"Its very beatiful!!",
+                    "author_id":"1",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                },
+                {
+                    "content":"Japan cant see it, noooo",
+                    "author_id":"14",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                }
+            ],
+            "views": 1087
         }
     ],
     "users": [
@@ -273,6 +315,37 @@
             "avatar_url": "../../img/user/.jpg",
             "bio": "World renowed dancer. In the industry for more than 10 years with more than 1000 medals. 2021 World Dancing Championship Winner",
             "thanks": 35283977
+        },
+        {
+            "id": "12",
+            "name": "Ryan",
+            "post_history": 0,
+            "time_joined": "2023-08-12T11:45:15.780Z",
+            "last_post_id": "1-0",
+            "avatar_url": "../../img/user/yuhao.jpeg",
+            "bio": "Im gay.",
+            "thanks": 7
+        },
+        {
+            "id": "13",
+            "name": "Ah Beng",
+            "post_history": 0,
+            "time_joined": "2023-08-12T11:45:15.780Z",
+            "last_post_id": "1-0",
+            "avatar_url": "../../img/user/ahbeng.jpg",
+            "bio": "Look what look",
+            "thanks": 7
+        },
+        {
+            "id": "14",
+            "name": "Husky",
+            "post_history": 0,
+            "time_joined": "2023-08-12T11:45:15.780Z",
+            "last_post_id": "1-0",
+            "avatar_url": "../../img/user/husky.jpg",
+            "bio": "meow",
+            "thanks": 78788
         }
+
     ]
 }
