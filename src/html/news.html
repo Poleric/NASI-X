@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/news.css">
     <title>NASI-X NEWS PAGE</title>
-    <script defer src="../js/bokeh.js"></script>
 </head>
 
 <body>
@@ -18,16 +17,25 @@
     <div class="bokeh"></div>
     <div class="bokeh"></div>
 
-    <header>
+    <div class="scroll-up">
+        <a href="#top">
+            <div class="up-arrow">
+            </div>
+        </a>
+    </div>
+
+    <header id="top">
         <a href="index.html" class="logo">NASI-X</a>
 
         <nav class="navbar">
             <a href="home.html"><span>HOME</span></a>
             <a href="study.html"><span>STUDY</span></a>
             <a href="model.html"><span>MODEL</span></a>
-            <a href="forum/index.html"><span>FORUM</span></a>
+            <a href="news.html"><b><i><u><span>NEWS</span></u></i></b></a>
             <a href="feedback.html"><span>FEEDBACK</span></a>
             <a href="additionalResource.html"><span>RESOURCES</span></a>
+            <a href="glossary.html"><span>GLOSSARY</span></a>
+            <a href="forum/index.html"><span>FORUM</span></a>
         </nav>
 
         <img class="dropdown-icon" src="../img/dropdown_icon.png" alt="">
@@ -125,7 +133,7 @@
                 </div>
             </div>
 
-            <div class="content tall1">
+            <div class="content tall">
                 <img src="../img/manonmoon.jpg" alt="" class="cover-photo">
 
                 <div class="caption">
@@ -148,6 +156,33 @@
                     <p class="caption-content">"Mars land photo by Phoenix-Y."</p>
                 </div>
             </div>
+
+            <div class="content wide">
+                <video src="../img/spinning_stuff.webm" loop controls></video>
+
+                <div class="caption">
+                    <p class="caption-content">Closeup of a galaxy captured by Kaplar</p>
+                </div>
+            </div>
+
+            <div class="content">
+                <video controls>
+                    <source src="../img/cosmic_whale_sound.webm" type="video/webm">
+                    <source src="../img/cosmic_whale_sound.mp4" type="video/mp4">
+                </video>
+
+                <div class="caption">
+                    <p class="caption-content">Low level sound of a Cosmic Whale captured on audio.</p>
+                </div>
+            </div>
+
+            <div class="content">
+                <img src="../img/dark_moon.jpg" alt="" class="cover-photo">
+
+                <div class="caption">
+                    <p class="caption-content">"A moon that's like ours discovered on the Sun."</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -155,36 +190,53 @@
     <p><b>More News In Progress...</b></p>
 </div>
 
-    <footer>
-        <hr />
-        <br />
-        <div class="left">
-            <h1 class="fcontent"><b>Office</b></h1>
-                <p>
-                    MGX6+HHH, Lane 1, Myawaddy, Myanmar.
-                </p>
-                <div>
-                    <a class="down"
-                        href="https://www.google.com/maps/place/KK+Garden+(%E5%8D%96%E7%8C%AA%E4%BB%94%E5%9B%BD%E9%99%85%E4%B8%AD%E5%BF%83)/@16.6989417,98.5111362,16z/data=!4m6!3m5!1s0x30dd9fed98bc39e3:0x2664fd971d3b535b!8m2!3d16.6989417!4d98.5114944!16s%2Fg%2F11l1q8p4nj?entry=ttu"
-                        target="_blank" rel="noopener noreferrer">
-                        <b>Get Directions</b>
-                    </a>
+<footer>
+    <div class="left">
+        <h1 class="fcontent"><b>Office</b></h1>
+            <p>
+                MGX6+HHH, Lane 1, Myawaddy, Myanmar.
+            </p>
+            <div>
+                <a class="down"
+                    href="https://www.google.com/maps/place/KK+Garden+(%E5%8D%96%E7%8C%AA%E4%BB%94%E5%9B%BD%E9%99%85%E4%B8%AD%E5%BF%83)/@16.6989417,98.5111362,16z/data=!4m6!3m5!1s0x30dd9fed98bc39e3:0x2664fd971d3b535b!8m2!3d16.6989417!4d98.5114944!16s%2Fg%2F11l1q8p4nj?entry=ttu"
+                    target="_blank" rel="noopener noreferrer">
+                    <b>Get Directions</b>
+                </a>
+                <div style="margin-top:10px;">
+                    <a href="#"><img src="../img/facebook.svg" height="30px"></a>
+                    <a href="#"><img src="../img/instagram.svg" height="30px"></a>
+                    <a href="#"><img src="../img/twitter.svg" height="30px"></a>
+                    <a href="#"><img src="../img/whatsapp.svg" height="30px"></a>
                 </div>
-        </div>
-        <div class="right">
-            <h1 class="fcontent"><b>Contact Us</b></h1>
-                <p class="con">
-                    <b>Tel: </b><a class="down" href="tel:+60123456789">+6012-345 6789</a>
-                </p>
-                <p class="con">
-                    <b>Fax: </b><a class="down" href="tel:+60358879545">+603-5887 9545</a>
-                </p>
-                <p class="con">
-                    <b>Email: </b>
-                    <a class="down" href="mailto:NasiX@gmail.com">NasiX@gmail.com</a>
-                </p>
-        </div>
-    </footer>
+            </div>
+    </div>
+    <div class="center">
+        <h1 class="fcontent"><b>Contact Us</b></h1>
+            <p class="con">
+                <b>Tel: </b><a class="down" href="tel:+60123456789">+6012-345 6789</a>
+            </p>
+            <p class="con">
+                <b>Fax: </b><a class="down" href="tel:+60358879545">+603-5887 9545</a>
+            </p>
+            <p class="con">
+                <b>Email: </b>
+                <a class="down" href="mailto:NasiX@gmail.com">NasiX@gmail.com</a>
+            </p>
+    </div>
+
+    <div class="right">
+        <h1 class="fcontent">NASI-X</h1>
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="study.html">STUDY</a></li>
+            <li><a href="model.html">MODEL</a></li>
+            <li><a href="news.html">NEWS</a></li>
+            <li><a href="./forum/index.html">FORUM</a></li>
+            <li><a href="additionalResource.html">RESOURCES</a></li>
+            <li><a href="glossary.html">GLOSSARY</a></li>
+        </ul>
+    </div>
+</footer>
 
 </body>
 

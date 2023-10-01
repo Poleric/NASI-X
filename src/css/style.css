@@ -105,35 +105,46 @@ header {
 }
 
 footer{
+    background-image:url('../img/footerbackground.jpg');
     text-align:center;
-    margin:10px;
+    display:flex;
+    justify-content:space-evenly;
+    border-top: white solid 1px;
+    padding:10px;
 }
 
-footer div.left{
-    float:left;
-    width:50%;
+footer h1{
+    color:orange;
+    margin:0;
 }
 
-footer div.right{
-    margin-left:50%;
-    width:40%;
+footer ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
 }
 
 footer h1.fcontent{
     margin:10px;
+    animation:none;
 }
   
 footer a:link{
-    color:blue;
+    color:rgb(110, 184, 178);
 }
 
 footer a:visited{
-    color:blue;
+    color:rgb(110, 184, 178);
 }
 
 footer a:hover{
-    color:orange;
+    color:rgb(191, 132, 182);
     text-decoration:none;
+}
+
+footer img{
+    margin:10px;
+    float:none !important;
 }
 
 .fly-in-all {

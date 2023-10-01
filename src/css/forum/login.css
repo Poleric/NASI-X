@@ -1,10 +1,6 @@
 .block-content {
     padding: 10px;
 
-    & hr {
-        margin: 5px 0;
-    }
-
     & .block-content {
         margin-bottom: 20px;
     }

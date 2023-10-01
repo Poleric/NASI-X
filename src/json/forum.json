@@ -17,7 +17,7 @@
                 },
                 {
                     "content": "Oh I'll be sticking around. Keep up the good work.",
-                    "author_id": "4",
+                    "author_id": "9",
                     "time_posted": "2023-09-19T03:30:02.780Z"
                 }
             ],
@@ -78,7 +78,7 @@
             "posts": [
                 {
                     "content":"Hmmmm.",
-                    "author_id":"10",
+                    "author_id":"12",
                     "time_posted":"2023-09-30T22:46:33.105366"
                 },
                 {
@@ -122,7 +122,7 @@
             "posts": [
                 {
                     "content": "Please~~~~",
-                    "author_id": "1",
+                    "author_id": "5",
                     "time_posted": "2023-10-10T22:45:33.105366"
                 },
                 {
@@ -159,11 +159,166 @@
                 },
                 {
                     "content":"你在说什么东西？？？",
+                    "author_id":"12",
+                    "time_posted":"2023-10-20T22:46:33.105366"
+                },
+                {
+                    "content":"我也觉得地球是平的，怎么会有人觉得地球是圆形啊",
+                    "author_id":"11",
+                    "time_posted":"2023-10-20T22:46:33.105366"
+                },
+                {
+                    "content":"地球是圆形的，都有照片可以看了",
+                    "author_id":"10",
+                    "time_posted":"2023-10-20T22:46:33.105366"
+                },
+                {
+                    "content":"No, That picture of the earth was a lie to you all.",
+                    "author_id":"13",
+                    "time_posted":"2023-10-20T22:46:33.105366"
+                },
+                {
+                    "content":"NO,our earth is triangle shape.",
+                    "author_id":"14",
+                    "time_posted":"2023-10-20T22:46:33.105366"
+                },
+                {
+                    "content":"You guys are talking bullshit.",
                     "author_id":"7",
                     "time_posted":"2023-10-20T22:46:33.105366"
                 }
             ],
-            "views": 1787
+            "views": 17871
+        },
+        {
+            "id": "8",
+            "title": "Today got super moon.",
+            "posts": [
+                {
+                    "content": "At Kuala Lumpur",
+                    "author_id": "11",
+                    "time_posted": "2023-09-29T22:45:33.105366"
+                },
+                {
+                    "content":"I also see it",
+                    "author_id":"9",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                },
+                {
+                    "content":"Its very beatiful!!",
+                    "author_id":"1",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                },
+                {
+                    "content":"Japan cant see it, noooo",
+                    "author_id":"15",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                }
+            ],
+            "views": 1087
+        },
+        {
+            "id": "9",
+            "title": "Does anyone want to go stargazing with me?.",
+            "posts": [
+                {
+                    "content": "At Kuala Lumpur tomorrow",
+                    "author_id": "3",
+                    "time_posted": "2023-09-29T22:45:33.105366"
+                },
+                {
+                    "content":"+1",
+                    "author_id":"15",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                },
+                {
+                    "content":"+2",
+                    "author_id":"1",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                },
+                {
+                    "content":"Can i come with u?",
+                    "author_id":"5",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                },
+                {
+                    "content":"Count me in",
+                    "author_id":"9",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                }
+            ],
+            "views": 473
+        },
+        {
+            "id": "9",
+            "title": "Can you guys share with me your photos of the moon?.",
+            "posts": [
+                {
+                    "content": "please dm me",
+                    "author_id": "1",
+                    "time_posted": "2023-09-29T22:45:33.105366"
+                },
+                {
+                    "content": "can, i will dm u later",
+                    "author_id": "7",
+                    "time_posted": "2023-09-29T22:45:33.105366"
+                },
+                {
+                    "content":"of course",
+                    "author_id":"15",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                },
+                {
+                    "content":"sure",
+                    "author_id":"2",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                },
+                {
+                    "content":"can",
+                    "author_id":"5",
+                    "time_posted":"2023-09-30T22:46:33.105366"
+                }   
+            ],
+            "views": 753
+        },
+        {
+            "id": "10",
+            "title": "Hi guys, I first time join in",
+            "posts": [
+                {
+                    "content": "we can be a friend",
+                    "author_id": "16",
+                    "time_posted": "2023-09-29T22:45:33.105366"
+                },
+                {
+                    "content": "HI",
+                    "author_id": "17",
+                    "time_posted": "2023-09-29T22:45:33.105366"
+                }  
+            ],
+            "views": 753
+        },
+        {
+            "id": "11",
+            "title": "Does anyone want to have dinner and chat? ",
+            "posts": [
+                {
+                    "content": "later 8pm",
+                    "author_id": "16",
+                    "time_posted": "2023-09-29T22:45:33.105366"
+                },
+                {
+                    "content": "Me",
+                    "author_id": "17",
+                    "time_posted": "2023-09-29T22:45:33.105366"
+                },
+                {
+                    "content": "+1+1+1",
+                    "author_id": "15",
+                    "time_posted": "2023-09-29T22:45:33.105366"
+                }  
+            ],
+            "views": 7515
         }
     ],
     "users": [
@@ -246,11 +401,11 @@
         },
         {
             "id": "9",
-            "name": "Anayami",
+            "name": "Ayanami",
             "post_history": 0,
             "time_joined": "2023-09-12T11:45:15.780Z",
             "last_post_id": "1-0",
-            "avatar_url": "../../img/user/anayami.jpg",
+            "avatar_url": "../../img/user/ayanami.jpg",
             "bio": "Hi",
             "thanks": 2
         },
@@ -269,10 +424,72 @@
             "name": "LiLi",
             "post_history": 0,
             "time_joined": "2023-08-12T11:45:15.780Z",
-            "last_post_id": "1-0",
-            "avatar_url": "../../img/user/.jpg",
+            "last_post_id": "8-0",
+            "avatar_url": "../../img/user/lili.jpeg",
             "bio": "World renowed dancer. In the industry for more than 10 years with more than 1000 medals. 2021 World Dancing Championship Winner",
             "thanks": 35283977
+        },
+        {
+            "id": "12",
+            "name": "Ryan",
+            "post_history": 0,
+            "time_joined": "2023-08-12T11:45:15.780Z",
+            "last_post_id": "1-0",
+            "avatar_url": "../../img/user/yuhao.jpeg",
+            "bio": "Im gay, just kidding.",
+            "thanks": 7
+        },
+        {
+            "id": "13",
+            "name": "Ah Beng",
+            "post_history": 0,
+            "time_joined": "2023-08-12T11:45:15.780Z",
+            "last_post_id": "9-0",
+            "avatar_url": "../../img/user/ahbeng.jpg",
+            "bio": "Look what look",
+            "thanks": 7
+        },
+        {
+            "id": "14",
+            "name": "Husky",
+            "post_history": 0,
+            "time_joined": "2023-08-12T11:45:15.780Z",
+            "last_post_id": "7-0",
+            "avatar_url": "../../img/user/husky.jpg",
+            "bio": "meow",
+            "thanks": 78
+        },
+        {
+            "id": "15",
+            "name": "Angry Frog",
+            "post_history": 0,
+            "time_joined": "2023-08-12T11:45:15.780Z",
+            "last_post_id": "3-0",
+            "avatar_url": "../../img/user/frog.png",
+            "bio": "get out my way",
+            "thanks": 455
+        },
+        {
+            "id": "16",
+            "name": "whiteface",
+            "post_history": 0,
+            "time_joined": "2023-08-12T11:45:15.780Z",
+            "last_post_id": "2-0",
+            "avatar_url": "../../img/user/whiteface.png",
+            "bio": "get out my way",
+            "thanks": 125
+        },
+        {
+            "id": "17",
+            "name": "NPC man",
+            "post_history": 0,
+            "time_joined": "2023-08-12T11:45:15.780Z",
+            "last_post_id": "2-0",
+            "avatar_url": "../../img/user/MemeMan.webp",
+            "bio": "get out my way",
+            "thanks": 125
         }
+
+
     ]
 }
