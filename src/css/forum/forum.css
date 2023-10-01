@@ -145,6 +145,11 @@ header {
     }
 }
 
+hr {
+    width: 100%;
+    margin: 5px 0;
+}
+
 footer {
     display: flex;
     flex-flow: column;
@@ -202,11 +207,6 @@ footer {
         font-size: 26px;
         font-weight: lighter;
         margin: 0;
-    }
-
-    & hr {
-        margin-top: 4px;
-        width: 100%;
     }
 
     margin-top: 5px;
