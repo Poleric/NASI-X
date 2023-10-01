@@ -185,10 +185,15 @@ footer img{
     }
 }
 
+@media (max-width: 1080px) {
+    body {
+        font-size: 12px;
+    }
+}
 
 @media (max-width: 850px) {
-    * {
-        font-size: 10px;
+    body {
+        font-size: 12px !important;
     }
 
     .navbar {
