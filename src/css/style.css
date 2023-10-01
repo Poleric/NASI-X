@@ -90,7 +90,7 @@ header {
     translate: -100% -100%;
     width: 40px;
     height: 40px;
-    background-color: darkslateblue;
+    background-color: rgb(0, 0, 0);
     border-radius: 50%;
     z-index: 99;
 }
@@ -98,7 +98,7 @@ header {
 .up-arrow {
     width: 20px;
     height: 20px;
-    border: solid lightslategrey;
+    border: solid rgb(255, 255, 255);
     border-width: 0 3px 3px 0;
     margin-top: 9px;
     rotate: 225deg;
