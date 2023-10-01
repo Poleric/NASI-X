@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/study.css" />
+    <script src="../js/imagemap_resize.js"></script>
     <title>NASI-X STUDY PAGE</title>
 </head>
 
@@ -53,8 +54,14 @@
             <p class="solar_system_t">Our solar system have 10 planet, that is Mercury, Venus, Earth, Mars, Jupiter,
                 Saturn, Uranus, Neptune, Kristane, and Pologane.</p>
         </div>
+
+        <img src="../img/solar_system.jpg" alt="The Solar System" usemap="#solar-system" style="width: 100%">
+        <map name="solar-system" id="solar-system">
+            <area shape="circle" coords="256,1080,84" href="#neptune" alt="Neptune">
+            <area shape="circle" coords="588,1080,92" href="#uranus" alt="Uranus">
+        </map>
         
-        <div class="mercury desc">
+        <div class="mercury desc" id="mercury">
             <h2>Mercury</h2>
             <p class="mercury_t">Composed mainly of rock and metal, is around 4.6 billion years old, has
                 an orbital speed of 47.87 km/s, a surface temperature that varies from extremely hot to extremely
@@ -63,7 +70,7 @@
                 spherical shape.</p>
                 <img src="../img/sui-removebg-preview.png"> 
         </div> 
-        <div class="venus desc">
+        <div class="venus desc" id="venus">
             <h2>Venus</h2>
             <p class="venus_t">A rocky planet, approximately 4.6 billion years old, with an orbital speed of
                 about 35.02 km/s, a scorching surface temperature due to its thick atmosphere, a mass roughly 0.815
@@ -72,7 +79,7 @@
                 spherical shape.</p>
                 <img src="../img/jin-removebg-preview.png"> 
         </div>
-        <div class="earth desc">
+        <div class="earth desc" id="earth">
             <h2>Earth</h2>
             <p class="earth_t">Primarily composed of rock and metal, is about 4.5 billion years old, has an
                 orbital speed of about 29.78 km/s, a moderate average surface temperature, a mass of about 1 Earth
@@ -80,7 +87,7 @@
                 density close to 5.52 g/cm³, and an almost spherical shape.</p>
                 <img src="../img/di-removebg-preview.png"> 
         </div>
-        <div class="mars desc">
+        <div class="mars desc" id="mars">
             <h2>Mars</h2>
             <p class="mars_t">Predominantly rocky, is approximately 4.6 billion years old, has an orbital
                 speed of about 24.08 km/s, a surface temperature that can vary greatly, a mass around 0.107 Earth
@@ -89,7 +96,7 @@
                 shape.</p>
                 <img src="../img/huo-removebg-preview.png"> 
         </div>
-        <div class="jupiter desc">
+        <div class="jupiter desc" id="jupiter">
             <h2>Jupiter</h2>
             <p class="jupiter_t">Consists mainly of gas and liquid, is roughly 4.5 billion years old, has
                 an orbital speed of about 13.07 km/s, no well-defined surface temperature due to its gaseous nature,
@@ -98,7 +105,7 @@
                 kilometers, a relatively low density, and an oblate spheroid shape.</p>
                 <img src="../img/mu-removebg-preview.png"> 
          </div>
-        <div class="saturn desc">
+        <div class="saturn desc" id="saturn">
             <h2>Saturn</h2>
             <p class="saturn_t">Primarily composed of gas and liquid, is about 4.5 billion years old, has
                 an orbital speed of about 9.68 km/s, no distinct surface temperature due to its gaseous composition,
@@ -107,7 +114,7 @@
                 kilometers, a relatively low density, and an oblate spheroid shape.</p>
                 <img src="../img/tu-removebg-preview.png"> 
         </div>
-        <div class="uranus desc">
+        <div class="uranus desc" id="uranus">
             <h2>Uranus</h2>
             <p class="uranus_t">Primarily composed of gas and ice, is around 4.5 billion years old, has an
                 orbital speed of about 6.8 km/s, a frigid surface temperature due to its distance from the Sun, a
@@ -116,7 +123,7 @@
                 relatively low density, and a slightly flattened spheroid shape.</p>
                 <img src="../img/tian-removebg-preview.png"> 
         </div>
-        <div class="neptune desc">
+        <div class="neptune desc" id="neptune">
             <h2>Neptune</h2>
             <p class="neptune_t">Primarily composed of gas and ice, is around 4.5 billion years old, has
                 an orbital speed of about 5.43 km/s, a freezing surface temperature due to its distance from the
@@ -125,12 +132,12 @@
                 relatively low density, and a slightly flattened spheroid shape.</p>
                 <img src="../img/hai-removebg-preview.png"> 
         </div>
-        <div class="nigamamn desc">
+        <div class="nigamamn desc" id="nigamamn">
             <h2>Nigamamn</h2>
             <p class="nigamann_t">Make up of flour, is about 193444 trillion years old, has an orbital speed of about 12345km/s, surface temperature is -3800 degree celsius, a mass about 0.0000089 times than earth, unknow diameter, and it's shape is donut shape, this planet got alien, even thought the temperatur of the planet is low, but just enought for the alien, got water and food.</p>
             <img src="../img/9-removebg-preview.png" height="300px" width="310px"> 
         </div>
-        <div class="trigotine desc">
+        <div class="trigotine desc" id="trigotine">
             <h2>Trigotine</h2>
             <p class="trigotine_t">Make up of diamond, is about 5.328 trillion years old, has an orbital speed of about 0.1km/s, surface temperature is 3556 degree celsius, a mass about 1000 times than earth, have an asymmetrical diameter, and it's shape is diamond shape, even thought this planet is far from sun, but itself can generate light and heat, so the temperature is warm.</p>
             <img src="../img/10-removebg-preview.png" height="300px" width="300px"> 
@@ -225,6 +232,7 @@
         </div>
     </footer>
 
+    <script>imageMapResize("map#solar-system")</script>
 </body>
 
 </html>
