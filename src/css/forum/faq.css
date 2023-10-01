@@ -1,0 +1,14 @@
+dl {
+    margin: 0;
+
+    & dt {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        text-decoration: underline;
+    }
+
+    & dd {
+        margin-bottom: 10px;
+    }
+}
