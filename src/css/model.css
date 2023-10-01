@@ -166,11 +166,6 @@ header {
     }
 }
 
-* {
-    scroll-behavior: smooth !important;
-}
-
-
 .sections {
     overflow: hidden;
 }

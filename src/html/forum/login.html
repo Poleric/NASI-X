@@ -5,7 +5,8 @@
     <meta name="keywords" content="NASI-X"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="../../css/forum.css">
+    <link rel="stylesheet" href="../../css/forum/forum.css">
+    <link rel="stylesheet" href="../../css/forum/login.css">
     <title>Login / Register | NASI-X Forums</title>
 </head>
 <body>
@@ -29,6 +30,70 @@
         </nav>
     </header>
 
+    <div class="block">
+        <div class="block-content">
+            <h2>Registration</h2>
+
+            <hr>
+
+            <div class="block-header">Register</div>
+            <form action="" method="post" class="block-content">
+                <div class="input-field">
+                    <label for="register-username">Username :</label>
+                    <input type="text" name="register-username" id="register-username" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="register-password">Password :</label>
+                    <input type="password" name="register-password" id="register-password" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="register-confirm-password">Confirm password :</label>
+                    <input type="password" name="register-confirm-password" id="register-confirm-password" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="register-email">Email address :</label>
+                    <input type="email" name="register-email" id="register-email">
+                </div>
+
+                <div class="input-field">
+                    <label for="register-captcha">Are you a robot?</label>
+                    <select name="register-captcha" id="register-captcha">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <hr>
+
+                <input type="submit" value="Register">
+            </form>
+
+            <div class="block-header">Login</div>
+            <form action="" method="post" class="block-content">
+                <div class="input-field">
+                    <label for="login-username">Username :</label>
+                    <input type="text" name="login-username" id="login-username" required>
+                </div>
+
+                <div class="input-field">
+                    <label for="login-password">Password :</label>
+                    <input type="password" name="login-password" id="login-password" required>
+                </div>
+
+                <div class="input-field">
+                    <input type="checkbox" name="login-keep-login" id="login-keep-login">
+                    <label for="login-keep-login">Keep me logged in.</label>
+                </div>
+
+                <hr>
+
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
 
     <footer>
         <div class="block">
